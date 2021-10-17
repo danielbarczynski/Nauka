@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Nauka2
 {
@@ -37,6 +38,7 @@ namespace Nauka2
             {
                 z = rnd.Next(0, 2000);
                 Console.WriteLine(i + " bicie: " + z);
+                Thread.Sleep(200);
 
                 if (z == 1)
                 {
