@@ -8,6 +8,7 @@ namespace Nauka3
         {
             Random rnd = new Random();
             int a, printNumber = 0;
+
             while (printNumber < 51)   // while (end)
             {
                 a = rnd.Next(0, 100);
@@ -30,7 +31,7 @@ namespace Nauka3
 
             do // NAJPIERW ROBI, POTEM SPRAWDZA CZY MA RO BIĆ DALEJ
             { 
-             a = rnd.Next(0, 100);
+             a = rnd.Next(0, 10);
                 if (a % 2 == 0) // czy podzielna przez 2, czy wychodzi jej 0 reszty, jesli tak, zapisz
                 {
                     printNumber++;
@@ -39,7 +40,7 @@ namespace Nauka3
                 else
                     continue;
             }
-            while (printNumber < 50); 
+            while (printNumber < 80); 
         }
     }
 }

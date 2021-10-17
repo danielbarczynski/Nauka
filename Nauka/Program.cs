@@ -41,7 +41,11 @@ namespace Nauka
                 Console.WriteLine("m większe");
             else
                 Console.WriteLine("\nn większe");
-       
+
+            string p = Console.ReadLine();
+            char d = Console.ReadKey().KeyChar;
+            
+            Console.WriteLine("\n" + p + d + d);
 
 
         }
