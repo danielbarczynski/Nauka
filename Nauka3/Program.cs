@@ -28,20 +28,20 @@ namespace Nauka3
             }
 
             //----------------------------------------------------------------------------------------
-            int b, c = 0; // printnumber is only name, in this example I have inserted c instead
+            int b, i = 0; // printnumber is only name, in this example I have inserted c instead
 
             do // NAJPIERW ROBI, POTEM SPRAWDZA CZY MA RO BIĆ DALEJ
             { 
              b = rnd.Next(0, 10);
                 if (b % 2 == 0) // czy podzielna przez 2, czy wychodzi jej 0 reszty, jesli tak, zapisz
                 {
-                    c++;
-                    Console.WriteLine("number {0}: {1}", c, b);
+                    i++; // same as for (int i = 0) loop
+                    Console.WriteLine("number {0}: {1}", i, b);
                 }
-                else
+                else  
                     continue;
             }
-            while (c < 80); 
+            while (i < 80); 
 
             // in general, two variables with the same value, c is used to loop
         }
