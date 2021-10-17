@@ -45,7 +45,7 @@ namespace Nauka
             string p = Console.ReadLine();
             char d = Console.ReadKey().KeyChar;
             
-            Console.WriteLine("\n" + p + d + d);
+            Console.WriteLine("\n" + p + d + d + d);
 
 
         }
