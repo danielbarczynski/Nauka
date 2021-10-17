@@ -7,7 +7,7 @@ namespace Nauka3
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int a, b, i = 0;
+            int a, b, c, d, i = 0;
 
             while (i < 51)   // while (end)
             {
@@ -41,7 +41,32 @@ namespace Nauka3
                 else  
                     continue;
             }
-            while (i < 80); 
+            while (i < 80);
+
+            do
+            {
+                c = rnd.Next(0, 20);
+                if (c % 2 == 0)
+                {
+                    i++;
+                    Console.WriteLine("your even number");
+                }
+                else
+                    continue;
+            }
+            while (i < 100);
+
+            while (c < 120)
+            {
+                d = rnd.Next(50, 200);
+                if (d % 5 == 0)
+                {
+                    c++;
+                    Console.WriteLine("hej smieciu, ostatnie dziala");
+                }
+                else
+                    continue;
+            }
 
             // in general, two variables with the same value, c is used to loop
         }
