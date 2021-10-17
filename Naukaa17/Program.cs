@@ -17,6 +17,15 @@ namespace Naukaa17
             foreach (string s in animals)
                 Console.WriteLine(s);
 
+            Console.WriteLine("-------");
+
+            string txt = animals.Dequeue(); //removing first animal cat and saving to string
+            animals.Dequeue(); // removing another one in the line, dog
+            Console.WriteLine("The next element in line: {0}", animals.Peek()); // peek of queue
+
+            foreach (string s in animals)
+                Console.WriteLine(s);
+
         }
     }
 }
