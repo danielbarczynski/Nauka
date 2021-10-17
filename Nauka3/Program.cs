@@ -7,7 +7,7 @@ namespace Nauka3
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int a, b , i = 0;
+            int a, b, i = 0;
 
             while (i < 51)   // while (end)
             {
