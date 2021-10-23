@@ -1,23 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Naukaa19
 {
-    class Program
+    public class CatsGenerator
     {
-        static void Main(string[] args)
+
+        // lista nie jest nigdzie dostępna
+        // hermatyzacja
+
+        public List<CatModel> CatsList = new List<CatModel>();
+
+        // nazwa funckji sprzeczna z jej logiką
+        // brak petli
+        //mozna to wszystko latwo zapesuc 
+        // (int n)
+
+        public void Genenerate5Cats(int i)
         {
-            List<Address> lst = new List<Address>();
-            for (i = 1; i <= 10; i++)
-            {
-                lst.Add(new Address());
-                
-            }
+            foreach (int i = 0; i < 5; i++)
+          {
+                CatsList.Add(new CatModel);
+                Age = i + 1;
+                Name = "Kotek" + i.ToString();
+            };
+            CatsList.Add(cat);
+            System.Console.WriteLine($"imie kota: {cat.Name} i wiek: {cat.Age}");
+
+            //interpolacja stringow
         }
-        
-    }   
-    public class Address
-    {
-        public string name { get; set; }
     }
 }

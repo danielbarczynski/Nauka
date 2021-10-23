@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 
 namespace Naukaa18
 {
@@ -11,18 +12,23 @@ namespace Naukaa18
 
         public void Genenerate5Cats()
         {
-            for(int i = 0; i < 5; i++)
-          {
-                CatsList.Add(new CatModel);
-                Age = i + 1;
-                Name = "Kotek" + i.ToString();
-          };
-            CatsList.Add(cat);
-            System.Console.WriteLine($"imie kota: {cat.Name} i wiek: {cat.Age}");
+            for (int i = 0; i < 5; i++)
+            {
+                CatsList.Add(new CatModel
+                {
+                    Age = i + 1,
+                    Name = "Kotek" + i.ToString()
+                });
+            }
+          
 
-            
+            foreach (var CatModel in CatsList)
+            {
+                Console.WriteLine(CatModel.Name);
+                Console.WriteLine(CatModel.Age);
+            }
+
         }
-        // ZROBIĆ LISTE LICZBOWĄ I GENERATOR LICZB DO NIEJ
     }
     public class CatModel
     {
