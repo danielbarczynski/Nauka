@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 
 namespace Naukaa11
 {
@@ -12,7 +12,14 @@ namespace Naukaa11
             player1.name = "Alice";
             player1.SetAge(19);
             player2.name = "Bob";
-            player2.SetAge(5);
+            player2.SetAge(-22);
+
+            Cat cat1 = new Cat();
+
+            cat1.Name = "Kotek";
+            cat1.Age = 10;
+
+            Console.WriteLine("cat name is {0} and its age is {1}", cat1.Name, cat1.Age);
         }
     }
 
@@ -25,8 +32,14 @@ namespace Naukaa11
                            
         public void SetAge(int a) // void czyli nie zwraca nic
         {
-            age = Math.Max(a, 0); // sets a if +ve, or 0 otherwise
+            age = Math.Max(a, 0); // choose higher number inside brackets so there is no negative numbers
             Console.WriteLine("{0} is {1} years old.", name, age);
         }
+    }
+
+    class Cat
+    {
+        public string Name;
+        public int Age;
     }
 }

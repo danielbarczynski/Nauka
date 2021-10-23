@@ -15,7 +15,7 @@ namespace Naukaa15
 
     interface IFigure // musi byc z duzej litery i "I", zeby rozeznac sie co jest class a co interface
     {
-        int Corners { get; set; }
+        int Corners { get; set; } // nie ma sensu by byly publiczne
 
         double GetArea();
     }

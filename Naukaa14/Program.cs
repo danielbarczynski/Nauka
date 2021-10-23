@@ -17,6 +17,7 @@ namespace Naukaa14
             w.Salary = 4e9; // 4 000 000 000 - e 9 - dolicza 9 zer
             w.HelloHuman();
             w.PrintInfo();
+            
 
         }
     }
@@ -24,8 +25,6 @@ namespace Naukaa14
 
     class Human
     {
-
-        // properties
 
         private int BirthYear { get; set; } = 1900;
 
@@ -37,8 +36,6 @@ namespace Naukaa14
         {
             Console.WriteLine("I'm human!");
         }
-
-
     }
 
     class Worker : Human //kopiowanie rzeczy z klasy human
@@ -47,7 +44,7 @@ namespace Naukaa14
 
         public void PrintInfo()
         {
-            Console.WriteLine("{0} {1}", Name, Surname);
+            Console.WriteLine("{0} {1} {2}", Name, Surname, Salary);
         }
     }
 }

@@ -7,19 +7,28 @@ namespace Ex_05_05
         {
             Player player1 = new Player("Alice", 19);
             player1.PrintInfo();
+
+            Cat cat1 = new Cat("Kotek1", 10);
+            Console.WriteLine("{0}, {1}", cat1.Name, cat1.Age);
+            cat1.PrintInfo();
+            player1.Salary = 300;
+           
+
         }
     }
     /**********************************************************************/
     class Player
     {
         // Fields
-        int age;
+        int age; // small age
         string name;
 
         // Properties
 
-        public int Age { get => age; set => age = Math.Max(value, 0); }
+        public int Age { get => age; set => age = Math.Max(value, 0); } // big age
         public string Name { get => name; set => name = value; }
+
+        public int Salary { get; set; }
 
         // public string Name { get; set; }
         // public int P1 { get; } // Read only property
@@ -43,4 +52,21 @@ namespace Ex_05_05
             Console.WriteLine("{0}, {1}", Name, Age);
         }
     }
+    class Cat
+    {
+        public int Age { get; set; }
+        public string Name { get; set; }
+
+        public Cat(string n, int a)
+        {
+            Age = a;
+            Name = n;
+        }
+        public void PrintInfo()
+        {
+            Console.WriteLine("{0}, {1}", Name, Age);
+        }
+
+    }
+  
 }
