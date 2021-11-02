@@ -6,6 +6,16 @@ namespace Nauka
     {
         static void Main(string[] args)
         {
+            string wyraz = "iloscLiter";
+            Console.WriteLine(wyraz.Length); // console - klasa, write() metoda
+
+            Console.Write("podaj imie: "); // write!!!
+            string pytanieImie = Console.ReadLine(); 
+            Console.WriteLine("witaj " + pytanieImie);
+
+            Console.WriteLine(5/2); // wynik w int
+            Console.WriteLine(5/2.0); // wynik w double
+
             Random legi = new Random();
 
             int x = legi.Next(0, 2000);
@@ -47,6 +57,11 @@ namespace Nauka
             
             Console.WriteLine("\n" + p + d + d + d);
 
+            int r, t, wynik;
+            r = 5;
+            t = 2;
+            wynik = 2 * r * t;
+            Console.WriteLine(wynik);
 
         }
     }

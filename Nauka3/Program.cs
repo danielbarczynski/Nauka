@@ -62,7 +62,7 @@ namespace Nauka3
                 if (d % 5 == 0)
                 {
                     c++;
-                    Console.WriteLine("hej smieciu, ostatnie dziala");
+                    Console.WriteLine("hej ostatnie dziala");
                 }
                 else
                     continue;

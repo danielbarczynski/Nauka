@@ -24,6 +24,7 @@ namespace Nauka7
             string s1 = " mario kropka pe El ";
             string s2 = s1.Trim();
             Console.WriteLine(s2);
+            // could be also cw(s1.trim())
 
             Random rnd = new Random();
             int x = rnd.Next(-101, 101);

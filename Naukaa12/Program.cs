@@ -4,15 +4,7 @@ namespace Naukaa12
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Player player1 = new Player("Alice", 19);
-            Player player2 = new Player();
-
-            player1.PrintInfo();
-            player2.PrintInfo();
-
-        }
+        
         class Player
         {
             // Fields
@@ -30,10 +22,10 @@ namespace Naukaa12
 
             // Constructor, with parameters
 
-            public Player(string n, int a) // n - name a - age
+            public Player(string n, int a) // n - name a - age, #1 odwolanie na koncu
             {
                 age = Math.Max(a, 0);
-                name = n;
+                name= n;
             }
 
 
@@ -43,6 +35,15 @@ namespace Naukaa12
             public void PrintInfo()
             {
                 Console.WriteLine("{0}, {1}", name, age);
+
+            }
+            static void Main(string[] args)
+            {
+                Player player1 = new Player("Alice", 19); // sa przypisane dwa typy alice i 19 wiec #1 musi miec string n i int a
+                Player player2 = new Player();
+
+                player1.PrintInfo();
+                player2.PrintInfo();
 
             }
         }
