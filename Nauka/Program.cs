@@ -6,6 +6,11 @@ namespace Nauka
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Suma=" +
+            5 + 5 + " Iloczyn=" + 5 * 5); // zle, wystarczy dac 5+5 w nawias i to tak działą z plusami i kolejnoscia wykonywania
+
+            int l = 10;
+            Console.WriteLine("wynik: {0,5}", l);
             string wyraz = "iloscLiter";
             Console.WriteLine(wyraz.Length); // console - klasa, write() metoda
 
