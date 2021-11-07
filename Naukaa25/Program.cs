@@ -1,110 +1,71 @@
 ﻿using System;
+using System.Collections.Generic;
 
-
-class Director
+namespace Prototype
 {
 
-    public void construct(Builder builder)
+    public abstract class <nazwa-klasy>
     {
-        builder.build_part_a(); // metoda build nr1
-        builder.build_part_b();
-        builder.build_part_c();
+  public readonly decimal Price;
+    public ProductPrototype(decimal price)
+    {
+        Console.WriteLine("Executing constructor");
+        Price = price;
     }
 
+    public ProductPrototype Clone()
+    {
+        return (ProductPrototype)this.MemberwiseClone();
+    }
 }
 
-abstract class Builder
+public class Bread : ProductPrototype
 {
-
-    public Product product;
-
-    public Builder()
-    {
-        product = new Product();
-    }
-
-    public abstract void build_part_a();// metoda build nr2
-
-    public abstract void build_part_b();
-
-    public abstract void build_part_c();
-
-}
-public class Product
-{
-
-    public string name = "";
-
-    public Product() // if deleted there is only abc
-    {
-        name = "produkt";
-    }
-
+    public Bread(decimal price) : base(price) { }
 }
 
-class ConcreteBuilder1 : Builder
+public class Supermarket
 {
 
-    public override void build_part_a()// metoda build nr3
+    private Dictionary<string, ProductPrototype> _productList = new Dictionary<string, ProductPrototype>();
+
+    public void AddProduct(string key, ProductPrototype productPrototype)
     {
-        product.name += "a";
+        _productList.Add(key, productPrototype);
     }
 
-    public override void build_part_b()
+    public ProductPrototype GetClonedProduct(string key)
     {
-        product.name += "b";
+        var objectToCLone =
+      return < powinno - zwracac - klon - produktu >
     }
-    public override void build_part_c()
-    {
-        product.name += "c";
-    }
+    Dictionary<string, int> products;// 2 type, key and value
+  {
+    // for example 
+    {key: "orange", value: 1},
+    { key: "blue", value: 2}
 
+    // wartosci moga sie powtarzac, stringi nie przy adddictionary do listy
+    //MemberwiseClone - przydatna funkcja w c#
+  }
+  
 }
 
 
-class ConcreteBuilder2 : Builder
+class MainClass
 {
-
-    public override void build_part_a()
+    public static void Main(string[] args)
     {
-        product.name += "A";
-    }
+        Supermarket supermarket = new Supermarket();
+        var firstBread = new Bread(1.20);
+        supermarket.AddProduct("Bread", firstBread);
 
-    public override void build_part_b()
-    {
-        product.name += "B";
-    }
-    public override void build_part_c()
-    {
-        product.name += "C";
-    }
+        // tworzymy chleb, klonujemy drugi, dodajemy masło + rabat 10%
 
-}
-
-
-
-
-/* ############################################# */
-
-
-public class Program
-{
-    static void Main(string[] args)
-    {
-
-        Director director = new Director();
-
-        Builder concrete_builder = new ConcreteBuilder1();
-
-        director.construct(concrete_builder);
-        Product product = concrete_builder.product;
-        Console.WriteLine(product.name);
-
-        Builder concrete_builder2 = new ConcreteBuilder2(); //zmodyfikowane przeze mnie, działa :)
-
-        director.construct(concrete_builder2);
-        product = concrete_builder2.product;
-        Console.WriteLine(product.name);
-
+        var breadClone = supermarket.GetClonedProduct("Bread");
+        Console.WriteLine(String.Format("Bread - {0} zł", firstBread.Price));
+        Console.WriteLine(String.Format("Bread - {0} zł", breadClone.Price));
     }
 }
+}
+

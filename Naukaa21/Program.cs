@@ -1,385 +1,157 @@
 ﻿using System;
 
-class Program
+//finished prodcuct (#3)
+public class Computer
 {
-    private char winChar;
+    private string Type { get; set; } // lack of get;set; beacuse of #1
+    public string MotherBoard { get; set; }
+    public string Processor { get; set; }
+    public string Disc { get; set; }
+    public string Screen { get; set; }
+    public double Price { get; set; }
 
-    public char winPerson
+    public Computer(string computerType) // konstruktor, zawsze ta sama nazwa co klasa, nigdy nic nie zwracaja, nie trzeba pisac void
+        // on ma pomoc przy tworzeniu obiektu a nie zajmowac sie liczeniem wartosci #2, (#1)
     {
-        get { return winChar; }
-        set { winChar = value; }
+        Type = computerType;
+        Price = 0; // price wzieta z góry, więc tylko string computerType
     }
 
-    private bool hasWon;
-
-    public bool isWin
+    public void DisplayConfiguration() // #3 mainly that's why, (#4)
     {
-        get { return hasWon; }
-        set { hasWon = value; }
+        Console.WriteLine("Typ: " + Type);
+        Console.WriteLine("Plyta glowna: " + MotherBoard);
+        Console.WriteLine("Procesor: " + Processor);
+        Console.WriteLine("Dysk: " + Disc);
+        Console.WriteLine("Monitor: " + Screen);
+        Console.WriteLine("Cena: " + Price);
+    }
+}
+
+//director, second class, order to build !!! kierownik powiela te same metody co budowniczy
+public class ComputerShop
+{
+    public void ConstructComputer(ComputerBuilder computerBuilder)// void, cuz it is not named public ComputerShop, same as#4, dlaczego nie ma zmiennej?
+    {// class instead of variable?
+        computerBuilder.BuildMotherBoard();// to samo, czemu? (#5), wykorzystanie metodd z klasy poniżej w metodzie de facto
+        computerBuilder.BuildProcessor();
+        computerBuilder.BuildDisc();
+        computerBuilder.BuildScreen();
+    }
+}
+//kontrakt dla builder'a
+public abstract class ComputerBuilder // odwolanie do powyzej, klasa zawierająca metody, third class
+{
+    public Computer Computer { get; set; } // to jest konstruktor w sumie tak jak #1, (#6)
+    public abstract void BuildMotherBoard();//#5, metoda nic nie zwracajaca
+    public abstract void BuildProcessor();
+    public abstract void BuildDisc();
+    public abstract void BuildScreen();
+}
+//konkretny builder, tutaj juz budujemy
+public class OfficeComputerBuilder : ComputerBuilder // dziedziczy po metodach powyżej, forth class
+{
+    public OfficeComputerBuilder()//konstruktor
+    {
+        Computer = new Computer("biurowy"); // użycie computerType #2 oraz Comptuer Computer #6
     }
 
-    private bool isX;
-
-    public bool isY
+    public override void BuildMotherBoard() // override void ponieważ jest abstract
     {
-        get { return isX; }
-        set { isX = value; }
+        Computer.MotherBoard = "Asus Prime A320M-E";
+        Computer.Price += 259.90;
+    }
+    public override void BuildProcessor()
+    {
+        Computer.Processor = "AMD Ryzen 5 2600";
+        Computer.Price += 589.00;
+    }
+    public override void BuildDisc()
+    {
+        Computer.Disc = "Goodram CX400 250 GB SATA3";
+        Computer.Price += 149.99;
+    }
+    public override void BuildScreen()
+    {
+        Computer.Screen = "BenQ GW2270H (1920x1080)";
+        Computer.Price += 369.00;
+    }
+}
+
+public class GamingComputerBuilder : ComputerBuilder//fith class
+{
+    public GamingComputerBuilder()
+    {
+        Computer = new Computer("gamingowy");
     }
 
-    private char boxone, boxtwo, boxthree, boxfour, boxfive, boxsix, boxseven, boxeight, boxnine;
-
-    public char box1
+    public override void BuildMotherBoard()
     {
-        get { return boxone; }
-        set { boxone = value; }
+        Computer.MotherBoard = "Gigabyte X570 Aorus Elite";
+        Computer.Price += 895.60;
     }
-
-    public char box2
+    public override void BuildProcessor()
     {
-        get { return boxtwo; }
-        set { boxtwo = value; }
+        Computer.Processor = "Intel i7 9700K";
+        Computer.Price += 1829.00;
     }
-
-    public char box3
+    public override void BuildDisc()
     {
-        get { return boxthree; }
-        set { boxthree = value; }
+        Computer.Disc = "Samsung 970 EVO Plus 2TB M.2";
+        Computer.Price += 2028.45;
     }
-
-    public char box4
+    public override void BuildScreen()
     {
-        get { return boxfour; }
-        set { boxfour = value; }
+        Computer.Screen = "HP Z4W65A4 (3840x1600)";
+        Computer.Price += 4927.75;
     }
+}
 
-    public char box5
+public class ProfessionalComputerBuilder : ComputerBuilder//sixth class
+{
+    public ProfessionalComputerBuilder()
     {
-        get { return boxfive; }
-        set { boxfive = value; }
+        Computer = new Computer("profesjonalny");
     }
-
-    public char box6
+    public override void BuildMotherBoard()
     {
-        get { return boxsix; }
-        set { boxsix = value; }
+        Computer.MotherBoard = "Supermicro MBD X11DPH";
+        Computer.Price += 2755.30;
     }
-
-    public char box7
+    public override void BuildProcessor()
     {
-        get { return boxseven; }
-        set { boxseven = value; }
+        Computer.Processor = "Intel Xeon Gold 5120";
+        Computer.Price += 7999.00;
     }
-
-    public char box8
+    public override void BuildDisc()
     {
-        get { return boxeight; }
-        set { boxeight = value; }
+        Computer.Disc = "Seagate Skyhawk 14TB 3.5";
+        Computer.Price += 2101.75;
     }
-
-    public char box9
+    public override void BuildScreen()
     {
-        get { return boxnine; }
-        set { boxnine = value; }
+        Computer.Screen = "Eizo CG319X (4096x2160)";
+        Computer.Price += 20749.00;
     }
+}
 
-    public void WriteBoard()
+//client
+public class Program//seventh class
+{
+    static void Main(string[] args) // przekladanie z kierownika do budowniczego ponizej
     {
-        Console.WriteLine(" {0} | {1} | {2} ", boxone, boxtwo, boxthree);
-        Console.WriteLine(" --------- ");
-        Console.WriteLine(" {0} | {1} | {2} ", boxfour, boxfive, boxsix);
-        Console.WriteLine(" --------- ");
-        Console.WriteLine(" {0} | {1} | {2} ", boxseven, boxeight, boxnine);
-    }
+        ComputerShop computerShop = new ComputerShop();  // never used computer class
 
-    public void CheckWin()
-    {
-        // 123, 456, 789, 147, 258, 369, 159, 357
-        if ((box1 == 'X') && (box2 == 'X') && (box3 == 'X'))
-        {
-            isWin = true;
-            winPerson = 'X';
-            return;
-        }
-        if ((box4 == 'X') && (box5 == 'X') && (box6 == 'X'))
-        {
-            isWin = true;
-            winPerson = 'X';
-            return;
-        }
-        if ((box7 == 'X') && (box8 == 'X') && (box9 == 'X'))
-        {
-            isWin = true;
-            winPerson = 'X';
-            return;
-        }
-        if ((box1 == 'X') && (box4 == 'X') && (box7 == 'X'))
-        {
-            isWin = true;
-            winPerson = 'X';
-            return;
-        }
-        if ((box2 == 'X') && (box5 == 'X') && (box8 == 'X'))
-        {
-            isWin = true;
-            winPerson = 'X';
-            return;
-        }
-        if ((box3 == 'X') && (box6 == 'X') && (box9 == 'X'))
-        {
-            isWin = true;
-            winPerson = 'X';
-            return;
-        } // 159, 357
-        if ((box1 == 'X') && (box5 == 'X') && (box9 == 'X'))
-        {
-            isWin = true;
-            winPerson = 'X';
-            return;
-        }
-        if ((box3 == 'X') && (box5 == 'X') && (box7 == 'X'))
-        {
-            isWin = true;
-            winPerson = 'X';
-            return;
-        }
-        if ((box1 == 'Y') && (box2 == 'Y') && (box3 == 'Y'))
-        {
-            isWin = true;
-            winPerson = 'Y';
-            return;
-        }
-        if ((box4 == 'Y') && (box5 == 'Y') && (box6 == 'Y'))
-        {
-            isWin = true;
-            winPerson = 'Y';
-            return;
-        }
-        if ((box7 == 'Y') && (box8 == 'Y') && (box9 == 'Y'))
-        {
-            isWin = true;
-            winPerson = 'Y';
-            return;
-        }
-        if ((box1 == 'Y') && (box4 == 'Y') && (box7 == 'Y'))
-        {
-            isWin = true;
-            winPerson = 'Y';
-            return;
-        }
-        if ((box2 == 'Y') && (box5 == 'Y') && (box8 == 'Y'))
-        {
-            isWin = true;
-            winPerson = 'Y';
-            return;
-        }
-        if ((box3 == 'Y') && (box6 == 'Y') && (box9 == 'Y'))
-        {
-            isWin = true;
-            winPerson = 'Y';
-            return;
-        } // 159, 357
-        if ((box1 == 'Y') && (box5 == 'Y') && (box9 == 'Y'))
-        {
-            isWin = true;
-            winPerson = 'Y';
-            return;
-        }
-        if ((box3 == 'Y') && (box5 == 'Y') && (box7 == 'Y'))
-        {
-            isWin = true;
-            winPerson = 'Y';
-            return;
-        }
-    }
+        ComputerBuilder OfficeComputer = new OfficeComputerBuilder(); // budujemy od typu, new OfficeComp... instead of new ComputerBuilder
+        computerShop.ConstructComputer(OfficeComputer);// ^ bo to nowa klasa z klasy?, dziedziczaca po ComputerBuilder
+        OfficeComputer.Computer.DisplayConfiguration();// wyswietlenie consolewriteline
 
-    public void NotVacantError()
-    {
-        _error = true;
-        Console.WriteLine();
-        Console.WriteLine("Error: box not vacant!");
-        Console.WriteLine("Press any key to try again..");
-        Console.ReadKey();
-        return;
-    }
+        ComputerBuilder GamingComputer = new GamingComputerBuilder();// tworzenie
+        computerShop.ConstructComputer(GamingComputer); // budowanie
+        GamingComputer.Computer.DisplayConfiguration(); // wyswietlanie
 
-    public void DisplayLoss()
-    {
-        Console.WriteLine();
-        Console.WriteLine("No one won.");
-        Console.ReadKey();
-        Environment.Exit(1);
-    }
-
-    private bool hasError;
-
-    public bool _error
-    {
-        get { return hasError; }
-        set { hasError = value; }
-    }
-
-    static void Main()
-    {
-        int moveCount = 0; // check loss
-        char askMove; // display X or Y in question
-        int selTemp;
-        Program prog = new Program();
-        prog._error = false;
-        prog.box1 = ' ';
-        prog.box2 = ' ';
-        prog.box3 = ' ';
-        prog.box4 = ' ';
-        prog.box5 = ' ';
-        prog.box6 = ' ';
-        prog.box7 = ' ';
-        prog.box8 = ' ';
-        prog.box9 = ' ';
-        prog.isY = true;
-        Console.WriteLine(" -- Tic Tac Toe -- ");
-        Console.Clear();
-        while (!prog.isWin)
-        {
-            if (moveCount == 9)
-            {
-                prog.DisplayLoss();
-            }
-            if ((prog.isY) == true) // if is X
-            {
-                askMove = 'X';
-            }
-            else
-            {
-                askMove = 'Y';
-            }
-            Console.Clear();
-            prog.WriteBoard();
-            Console.WriteLine();
-            Console.WriteLine("What box do you want to place {0} in? (1-9)", askMove);
-            Console.Write("> ");
-            selTemp = int.Parse(Console.ReadLine());
-            switch (selTemp)
-            {
-                case 1:
-                    if (prog.box1 == ' ')
-                    {
-                        prog.box1 = askMove;
-                        moveCount++;
-                    }
-                    else
-                    {
-                        prog.NotVacantError();
-                    }
-                    break;
-                case 2:
-                    if (prog.box2 == ' ')
-                    {
-                        prog.box2 = askMove;
-                        moveCount++;
-                    }
-                    else
-                    {
-                        prog.NotVacantError();
-                    }
-                    break;
-                case 3:
-                    if (prog.box3 == ' ')
-                    {
-                        prog.box3 = askMove;
-                        moveCount++;
-                    }
-                    else
-                    {
-                        prog.NotVacantError();
-                    }
-                    break;
-                case 4:
-                    if (prog.box4 == ' ')
-                    {
-                        prog.box4 = askMove;
-                        moveCount++;
-                    }
-                    else
-                    {
-                        prog.NotVacantError();
-                    }
-                    break;
-                case 5:
-                    if (prog.box5 == ' ')
-                    {
-                        prog.box5 = askMove;
-                        moveCount++;
-                    }
-                    else
-                    {
-                        prog.NotVacantError();
-                    }
-                    break;
-                case 6:
-                    if (prog.box6 == ' ')
-                    {
-                        prog.box6 = askMove;
-                        moveCount++;
-                    }
-                    else
-                    {
-                        prog.NotVacantError();
-                    }
-                    break;
-                case 7:
-                    if (prog.box7 == ' ')
-                    {
-                        prog.box7 = askMove;
-                        moveCount++;
-                    }
-                    else
-                    {
-                        prog.NotVacantError();
-                    }
-                    break;
-                case 8:
-                    if (prog.box8 == ' ')
-                    {
-                        prog.box8 = askMove;
-                        moveCount++;
-                    }
-                    else
-                    {
-                        prog.NotVacantError();
-                    }
-                    break;
-                case 9:
-                    if (prog.box9 == ' ')
-                    {
-                        prog.box9 = askMove;
-                        moveCount++;
-                    }
-                    else
-                    {
-                        prog.NotVacantError();
-                    }
-                    break;
-                default:
-                    Console.WriteLine("Wrong selection entered!");
-                    Console.WriteLine("Press any key to try again..");
-                    Console.ReadKey();
-                    prog._error = true;
-                    break;
-            }
-            if (prog._error)
-            {
-                prog.CheckWin(); // if error, just check win
-                prog._error = !prog._error;
-            }
-            else
-            {
-                prog.isY = !prog.isY; // flip boolean
-                prog.CheckWin();
-            }
-        }
-        Console.Clear();
-        prog.WriteBoard();
-        Console.WriteLine();
-        Console.WriteLine("The winner is {0}!", prog.winPerson);
-        Console.ReadKey();
+        ComputerBuilder ProfessionalComputer = new ProfessionalComputerBuilder();
+        computerShop.ConstructComputer(ProfessionalComputer);
+        ProfessionalComputer.Computer.DisplayConfiguration();
     }
 }

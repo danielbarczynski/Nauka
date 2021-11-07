@@ -1,176 +1,385 @@
 ﻿using System;
 
-
-public class Computer
+class Program
 {
+    private char winChar;
 
-    private string _type;
-    public string MotherBoard { get; set; }
-    public double Price { get; set; }
-    public string Screen { get; set; }
-    public string Processor { get; set; }
-    public string HardDrive { get; set; }
-
-    public Computer(string computerType)
+    public char winPerson
     {
-        _type = computerType;
-        Price = 0;
+        get { return winChar; }
+        set { winChar = value; }
     }
 
-    public void DisplayConfiguration()
+    private bool hasWon;
+
+    public bool isWin
     {
-        Console.WriteLine("Typ: " + _type);
-        Console.WriteLine("Plyta glowna: " + MotherBoard);
-        Console.WriteLine("Procesor: " + Processor);
-        Console.WriteLine("Dysk: " + HardDrive);
-        Console.WriteLine("Monitor: " + Screen + "\n");
-        Console.WriteLine("Cena: " + Price + "\n");
-    }
-}
-
-
-public class ComputerShop
-{
-
-    public void ConstructComputer(ComputerBuilder computerBuilder)
-    {
-        computerBuilder.BuildScreen();
-        computerBuilder.BuildMotherBoard();
-        computerBuilder.BuildProcessor();
-        computerBuilder.BuildHardDrive();
+        get { return hasWon; }
+        set { hasWon = value; }
     }
 
-}
+    private bool isX;
 
-
-
-public abstract class ComputerBuilder
-{
-
-    public Computer Computer { get; set; }
-    public abstract void BuildMotherBoard();
-    public abstract void BuildProcessor();
-    public abstract void BuildHardDrive();
-    public abstract void BuildScreen();
-
-}
-
-
-public class OfficeComputerBuilder : ComputerBuilder
-{
-
-    public OfficeComputerBuilder()
+    public bool isY
     {
-        Computer = new Computer("biurowy");
+        get { return isX; }
+        set { isX = value; }
     }
 
-    public override void BuildMotherBoard()
+    private char boxone, boxtwo, boxthree, boxfour, boxfive, boxsix, boxseven, boxeight, boxnine;
+
+    public char box1
     {
-        Computer.MotherBoard = "Asus Prime A320M-E";
-        Computer.Price += 259.90;
-    }
-    public override void BuildProcessor()
-    {
-        Computer.Processor = "AMD Ryzen 5 2600";
-        Computer.Price += 589.00;
-    }
-    public override void BuildHardDrive()
-    {
-        Computer.HardDrive = "Goodram CX400 250 GB SATA3";
-        Computer.Price += 149.99;
-    }
-    public override void BuildScreen()
-    {
-        Computer.Screen = "BenQ GW2270H (1920x1080)";
-        Computer.Price += 369.00;
+        get { return boxone; }
+        set { boxone = value; }
     }
 
-}
-
-
-
-public class GamingComputerBuilder : ComputerBuilder
-{
-
-    public GamingComputerBuilder()
+    public char box2
     {
-        Computer = new Computer("gamingowy");
+        get { return boxtwo; }
+        set { boxtwo = value; }
     }
 
-    public override void BuildMotherBoard()
+    public char box3
     {
-        Computer.MotherBoard = "Gigabyte X570 Aorus Elite";
-        Computer.Price += 895.60;
-    }
-    public override void BuildProcessor()
-    {
-        Computer.Processor = "Intel i7 9700K";
-        Computer.Price += 1829.00;
-    }
-    public override void BuildHardDrive()
-    {
-        Computer.HardDrive = "Samsung 970 EVO Plus 2TB M.2";
-        Computer.Price += 2028.45;
-    }
-    public override void BuildScreen()
-    {
-        Computer.Screen = "HP Z4W65A4 (3840x1600)";
-        Computer.Price += 4927.75;
+        get { return boxthree; }
+        set { boxthree = value; }
     }
 
-}
-
-public class ProfessionalComputerBuilder : ComputerBuilder
-{
-
-    public ProfessionalComputerBuilder()
+    public char box4
     {
-        Computer = new Computer("dla profesjonalistow");
+        get { return boxfour; }
+        set { boxfour = value; }
     }
 
-    public override void BuildMotherBoard()
+    public char box5
     {
-        Computer.MotherBoard = "Supermicro MBD X11DPH";
-        Computer.Price += 2755.30;
-    }
-    public override void BuildProcessor()
-    {
-        Computer.Processor = "Intel Xeon Gold 5120";
-        Computer.Price += 7999.00;
-    }
-    public override void BuildHardDrive()
-    {
-        Computer.HardDrive = "Seagate Skyhawk 14TB 3.5\"";
-        Computer.Price += 2101.75;
-    }
-    public override void BuildScreen()
-    {
-        Computer.Screen = "Eizo CG319X (4096x2160)";
-        Computer.Price += 20749.00;
+        get { return boxfive; }
+        set { boxfive = value; }
     }
 
-}
-
-
-public class Program
-{
-    static void Main(string[] args)
+    public char box6
     {
+        get { return boxsix; }
+        set { boxsix = value; }
+    }
 
-        ComputerShop computerShop = new ComputerShop();
+    public char box7
+    {
+        get { return boxseven; }
+        set { boxseven = value; }
+    }
 
-        ComputerBuilder OfficeComputer = new OfficeComputerBuilder();
-        computerShop.ConstructComputer(OfficeComputer);
-        OfficeComputer.Computer.DisplayConfiguration();
+    public char box8
+    {
+        get { return boxeight; }
+        set { boxeight = value; }
+    }
 
-        ComputerBuilder GamingComputer = new GamingComputerBuilder();
-        computerShop.ConstructComputer(GamingComputer);
-        GamingComputer.Computer.DisplayConfiguration();
+    public char box9
+    {
+        get { return boxnine; }
+        set { boxnine = value; }
+    }
 
-        ComputerBuilder ProfessionalComputer = new ProfessionalComputerBuilder();
-        computerShop.ConstructComputer(ProfessionalComputer);
-        ProfessionalComputer.Computer.DisplayConfiguration();
+    public void WriteBoard()
+    {
+        Console.WriteLine(" {0} | {1} | {2} ", boxone, boxtwo, boxthree);
+        Console.WriteLine(" --------- ");
+        Console.WriteLine(" {0} | {1} | {2} ", boxfour, boxfive, boxsix);
+        Console.WriteLine(" --------- ");
+        Console.WriteLine(" {0} | {1} | {2} ", boxseven, boxeight, boxnine);
+    }
 
+    public void CheckWin()
+    {
+        // 123, 456, 789, 147, 258, 369, 159, 357
+        if ((box1 == 'X') && (box2 == 'X') && (box3 == 'X'))
+        {
+            isWin = true;
+            winPerson = 'X';
+            return;
+        }
+        if ((box4 == 'X') && (box5 == 'X') && (box6 == 'X'))
+        {
+            isWin = true;
+            winPerson = 'X';
+            return;
+        }
+        if ((box7 == 'X') && (box8 == 'X') && (box9 == 'X'))
+        {
+            isWin = true;
+            winPerson = 'X';
+            return;
+        }
+        if ((box1 == 'X') && (box4 == 'X') && (box7 == 'X'))
+        {
+            isWin = true;
+            winPerson = 'X';
+            return;
+        }
+        if ((box2 == 'X') && (box5 == 'X') && (box8 == 'X'))
+        {
+            isWin = true;
+            winPerson = 'X';
+            return;
+        }
+        if ((box3 == 'X') && (box6 == 'X') && (box9 == 'X'))
+        {
+            isWin = true;
+            winPerson = 'X';
+            return;
+        } // 159, 357
+        if ((box1 == 'X') && (box5 == 'X') && (box9 == 'X'))
+        {
+            isWin = true;
+            winPerson = 'X';
+            return;
+        }
+        if ((box3 == 'X') && (box5 == 'X') && (box7 == 'X'))
+        {
+            isWin = true;
+            winPerson = 'X';
+            return;
+        }
+        if ((box1 == 'Y') && (box2 == 'Y') && (box3 == 'Y'))
+        {
+            isWin = true;
+            winPerson = 'Y';
+            return;
+        }
+        if ((box4 == 'Y') && (box5 == 'Y') && (box6 == 'Y'))
+        {
+            isWin = true;
+            winPerson = 'Y';
+            return;
+        }
+        if ((box7 == 'Y') && (box8 == 'Y') && (box9 == 'Y'))
+        {
+            isWin = true;
+            winPerson = 'Y';
+            return;
+        }
+        if ((box1 == 'Y') && (box4 == 'Y') && (box7 == 'Y'))
+        {
+            isWin = true;
+            winPerson = 'Y';
+            return;
+        }
+        if ((box2 == 'Y') && (box5 == 'Y') && (box8 == 'Y'))
+        {
+            isWin = true;
+            winPerson = 'Y';
+            return;
+        }
+        if ((box3 == 'Y') && (box6 == 'Y') && (box9 == 'Y'))
+        {
+            isWin = true;
+            winPerson = 'Y';
+            return;
+        } // 159, 357
+        if ((box1 == 'Y') && (box5 == 'Y') && (box9 == 'Y'))
+        {
+            isWin = true;
+            winPerson = 'Y';
+            return;
+        }
+        if ((box3 == 'Y') && (box5 == 'Y') && (box7 == 'Y'))
+        {
+            isWin = true;
+            winPerson = 'Y';
+            return;
+        }
+    }
 
+    public void NotVacantError()
+    {
+        _error = true;
+        Console.WriteLine();
+        Console.WriteLine("Error: box not vacant!");
+        Console.WriteLine("Press any key to try again..");
+        Console.ReadKey();
+        return;
+    }
+
+    public void DisplayLoss()
+    {
+        Console.WriteLine();
+        Console.WriteLine("No one won.");
+        Console.ReadKey();
+        Environment.Exit(1);
+    }
+
+    private bool hasError;
+
+    public bool _error
+    {
+        get { return hasError; }
+        set { hasError = value; }
+    }
+
+    static void Main()
+    {
+        int moveCount = 0; // check loss
+        char askMove; // display X or Y in question
+        int selTemp;
+        Program prog = new Program();
+        prog._error = false;
+        prog.box1 = ' ';
+        prog.box2 = ' ';
+        prog.box3 = ' ';
+        prog.box4 = ' ';
+        prog.box5 = ' ';
+        prog.box6 = ' ';
+        prog.box7 = ' ';
+        prog.box8 = ' ';
+        prog.box9 = ' ';
+        prog.isY = true;
+        Console.WriteLine(" -- Tic Tac Toe -- ");
+        Console.Clear();
+        while (!prog.isWin)
+        {
+            if (moveCount == 9)
+            {
+                prog.DisplayLoss();
+            }
+            if ((prog.isY) == true) // if is X
+            {
+                askMove = 'X';
+            }
+            else
+            {
+                askMove = 'Y';
+            }
+            Console.Clear();
+            prog.WriteBoard();
+            Console.WriteLine();
+            Console.WriteLine("What box do you want to place {0} in? (1-9)", askMove);
+            Console.Write("> ");
+            selTemp = int.Parse(Console.ReadLine());
+            switch (selTemp)
+            {
+                case 1:
+                    if (prog.box1 == ' ')
+                    {
+                        prog.box1 = askMove;
+                        moveCount++;
+                    }
+                    else
+                    {
+                        prog.NotVacantError();
+                    }
+                    break;
+                case 2:
+                    if (prog.box2 == ' ')
+                    {
+                        prog.box2 = askMove;
+                        moveCount++;
+                    }
+                    else
+                    {
+                        prog.NotVacantError();
+                    }
+                    break;
+                case 3:
+                    if (prog.box3 == ' ')
+                    {
+                        prog.box3 = askMove;
+                        moveCount++;
+                    }
+                    else
+                    {
+                        prog.NotVacantError();
+                    }
+                    break;
+                case 4:
+                    if (prog.box4 == ' ')
+                    {
+                        prog.box4 = askMove;
+                        moveCount++;
+                    }
+                    else
+                    {
+                        prog.NotVacantError();
+                    }
+                    break;
+                case 5:
+                    if (prog.box5 == ' ')
+                    {
+                        prog.box5 = askMove;
+                        moveCount++;
+                    }
+                    else
+                    {
+                        prog.NotVacantError();
+                    }
+                    break;
+                case 6:
+                    if (prog.box6 == ' ')
+                    {
+                        prog.box6 = askMove;
+                        moveCount++;
+                    }
+                    else
+                    {
+                        prog.NotVacantError();
+                    }
+                    break;
+                case 7:
+                    if (prog.box7 == ' ')
+                    {
+                        prog.box7 = askMove;
+                        moveCount++;
+                    }
+                    else
+                    {
+                        prog.NotVacantError();
+                    }
+                    break;
+                case 8:
+                    if (prog.box8 == ' ')
+                    {
+                        prog.box8 = askMove;
+                        moveCount++;
+                    }
+                    else
+                    {
+                        prog.NotVacantError();
+                    }
+                    break;
+                case 9:
+                    if (prog.box9 == ' ')
+                    {
+                        prog.box9 = askMove;
+                        moveCount++;
+                    }
+                    else
+                    {
+                        prog.NotVacantError();
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Wrong selection entered!");
+                    Console.WriteLine("Press any key to try again..");
+                    Console.ReadKey();
+                    prog._error = true;
+                    break;
+            }
+            if (prog._error)
+            {
+                prog.CheckWin(); // if error, just check win
+                prog._error = !prog._error;
+            }
+            else
+            {
+                prog.isY = !prog.isY; // flip boolean
+                prog.CheckWin();
+            }
+        }
+        Console.Clear();
+        prog.WriteBoard();
+        Console.WriteLine();
+        Console.WriteLine("The winner is {0}!", prog.winPerson);
+        Console.ReadKey();
     }
 }

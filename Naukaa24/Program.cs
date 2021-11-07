@@ -1,32 +1,110 @@
 ﻿using System;
 
-namespace Naukaa24
+
+class Director
 {
-    class Program
+
+    public void construct(Builder builder)
     {
-        static void Main(string[] args)
-        {
-            int x, y = 4; // x0 y4
-            x = (y += 3); // x7 y7 
-            x = ++y; // x8 y8
-            x = y--;// x8 y7
-            Console.WriteLine(x);
-            Console.WriteLine(y);
+        builder.build_part_a(); // metoda build nr1
+        builder.build_part_b();
+        builder.build_part_c();
+    }
 
-            double wiek, PLN;
-            bool kino;
-            Console.WriteLine("Podaj wiek: ");
-            wiek = double.Parse(Console.ReadLine());
-            Console.WriteLine("Ile masz pieniędzy: ");
-            PLN = double.Parse(Console.ReadLine());
-            kino = (wiek >= 18 && PLN >= 20); // nawiasy nie są konieczne, dane dla czytelności
-            Console.WriteLine("pójdziesz do kina: " + kino);
+}
 
-            int z = 1, c = 2;
-            bool wynik;
-            wynik = (z >= 2 && c++ >= 2);// false, true, poniewaz pierwsza zmienna ma false, program nie sprawdza wgl drugiego
-            Console.WriteLine(wynik);
-            Console.WriteLine(c);// @up: a wiec wartosc 2 zamiast 3, gdy damy & zamiast &&, c=3
-        }
+abstract class Builder
+{
+
+    public Product product;
+
+    public Builder()
+    {
+        product = new Product();
+    }
+
+    public abstract void build_part_a();// metoda build nr2
+
+    public abstract void build_part_b();
+
+    public abstract void build_part_c();
+
+}
+public class Product
+{
+
+    public string name = "";
+
+    public Product() // if deleted there is only abc
+    {
+        name = "produkt";
+    }
+
+}
+
+class ConcreteBuilder1 : Builder
+{
+
+    public override void build_part_a()// metoda build nr3
+    {
+        product.name += "a";
+    }
+
+    public override void build_part_b()
+    {
+        product.name += "b";
+    }
+    public override void build_part_c()
+    {
+        product.name += "c";
+    }
+
+}
+
+
+class ConcreteBuilder2 : Builder
+{
+
+    public override void build_part_a()
+    {
+        product.name += "A";
+    }
+
+    public override void build_part_b()
+    {
+        product.name += "B";
+    }
+    public override void build_part_c()
+    {
+        product.name += "C";
+    }
+
+}
+
+
+
+
+/* ############################################# */
+
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+
+        Director director = new Director();
+
+        Builder concrete_builder = new ConcreteBuilder1();
+
+        director.construct(concrete_builder);
+        Product product = concrete_builder.product;
+        Console.WriteLine(product.name);
+
+        Builder concrete_builder2 = new ConcreteBuilder2(); //zmodyfikowane przeze mnie, działa :)
+
+        director.construct(concrete_builder2);
+        product = concrete_builder2.product;
+        Console.WriteLine(product.name);
+
     }
 }
