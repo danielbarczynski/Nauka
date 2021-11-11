@@ -6,8 +6,8 @@ namespace Naukaa11
     {
         static void Main(string[] args)
         {
-            Player player1 = new Player(); // plaer player1 - powołaj, new player - utworz
-            Player player2 = new Player();
+            Player player1 = new Player(); // player player1 - powołaj, new player - utworz
+            Player player2 = new Player(); // powoływanie nowej klasy
 
             player1.name = "Alice";
             player1.SetAge(19);

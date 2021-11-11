@@ -133,12 +133,15 @@ public class Application
 {
     public static void Main(String[] args)
     {
-        Factory latinAlphabetFactory = Factory.chooseFactory(Alphabets.Latin);
-        Console.WriteLine(latinAlphabetFactory);
-        Factory greekAlphabetFactory = Factory.chooseFactory(Alphabets.Greek);
-        Console.WriteLine(greekAlphabetFactory);
+        Factory latinAlphabetFactory = Factory.chooseFactory(Alphabets.Latin);        
+        Factory greekAlphabetFactory = Factory.chooseFactory(Alphabets.Greek);        
         Factory cyrillicAlphabetFactory = Factory.chooseFactory(Alphabets.Cyrillic);
-        Console.WriteLine(cyrillicAlphabetFactory);
+
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+        Console.WriteLine("{0} {1}", cyrillicAlphabetFactory.CreateLetters().GetLetters(), cyrillicAlphabetFactory.CreateNumbers().GetNumbers());
+        Console.WriteLine("{0} {1}", latinAlphabetFactory.CreateLetters().GetLetters(), latinAlphabetFactory.CreateNumbers().GetNumbers());
+        Console.WriteLine("{0} {1}", greekAlphabetFactory.CreateLetters().GetLetters(), greekAlphabetFactory.CreateNumbers().GetNumbers());
     }
 }
 

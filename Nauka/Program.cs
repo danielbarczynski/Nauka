@@ -21,7 +21,7 @@ namespace Nauka
             Console.WriteLine(5/2); // wynik w int
             Console.WriteLine(5/2.0); // wynik w double
 
-            Random legi = new Random();
+            Random legi = new ();
 
             int x = legi.Next(0, 2000);
             int y = legi.Next(0, 2000);
