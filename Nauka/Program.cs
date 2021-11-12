@@ -4,7 +4,7 @@ namespace Nauka
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) // ponieważ void to static zmienne poza tą metodą muszą zawierać ten keyword, nie można w niej napisać public!
         {
             Console.WriteLine("Suma=" +
             5 + 5 + " Iloczyn=" + 5 * 5); // zle, wystarczy dac 5+5 w nawias i to tak działą z plusami i kolejnoscia wykonywania

@@ -6,18 +6,20 @@ namespace Naukaa11
     {
         static void Main(string[] args)
         {
-            Player player1 = new Player(); // player player1 - powołaj, new player - utworz
-            Player player2 = new Player(); // powoływanie nowej klasy
+            Player player1 = new (); // player player1 - powołaj, new player - utworz
+            Player player2 = new (); // powoływanie nowej klasy, czyli stworzenie instancji nowego obiektu
 
             player1.name = "Alice";
             player1.SetAge(19);
             player2.name = "Bob";
             player2.SetAge(-22);
 
-            Cat cat1 = new Cat();
+            Cat cat1 = new ();
 
             cat1.Name = "Kotek";
             cat1.Age = 10;
+
+             
 
             Console.WriteLine("cat name is {0} and its age is {1}", cat1.Name, cat1.Age);
         }

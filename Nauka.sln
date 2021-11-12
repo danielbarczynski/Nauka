@@ -61,7 +61,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa28(absFactory)", "Nau
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa29(adapter)", "Naukaa29\Naukaa29(adapter).csproj", "{F3C0B276-0BA1-48B1-94D1-9BDB6E5C2F37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "freeSheet", "freeSheet\freeSheet.csproj", "{950A735D-E539-4022-A2A4-F50E902FC46B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "freeSheet", "freeSheet\freeSheet.csproj", "{950A735D-E539-4022-A2A4-F50E902FC46B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0EF6F4D-0617-4630-9755-51A8A28D561E}"
+	ProjectSection(SolutionItems) = preProject
+		notes.txt = notes.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
