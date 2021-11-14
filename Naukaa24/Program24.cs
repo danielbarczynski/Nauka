@@ -87,7 +87,7 @@ class ConcreteBuilder2 : Builder
 /* ############################################# */
 
 
-public class Program
+public class Program24
 {
     static void Main(string[] args)
     {

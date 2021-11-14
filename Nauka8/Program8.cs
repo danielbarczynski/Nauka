@@ -2,7 +2,7 @@
 
 namespace Nauka8
 {
-    class Program
+    class Program8
     {
         static void Main(string[] args)
         {

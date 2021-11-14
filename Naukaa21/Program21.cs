@@ -136,7 +136,7 @@ public class ProfessionalComputerBuilder : ComputerBuilder//sixth class
 }
 
 //client
-public class Program//seventh class
+public class Program21//seventh class
 {
     static void Main(string[] args) // przekladanie z kierownika do budowniczego ponizej
     {

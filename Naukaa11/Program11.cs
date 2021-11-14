@@ -2,7 +2,7 @@
 
 namespace Naukaa11
 {
-    class Program
+    class Program11
     {
         static void Main(string[] args)
         {

@@ -16,7 +16,7 @@ namespace Naukaa27
         }
     }
 
-    class Program
+    class Program26
     {
         static void Main(string[] args)
         {

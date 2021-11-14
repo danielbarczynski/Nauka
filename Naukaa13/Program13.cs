@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Ex_05_05
 {
-    class Program
+    class Program13
     {
         static void Main(string[] args)
         {

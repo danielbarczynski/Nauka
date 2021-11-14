@@ -1,6 +1,4 @@
-C# ${}
-field __adapte c#, null, this. constructor : this(id)
-project patterns repo
-constructor(string n, int a)
+get set
 args
-difference beetween private and static
+
+project patterns repo

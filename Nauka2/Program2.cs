@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace Nauka2
 {
-    class Program
+    class Program2
     {
         static void Main(string[] args)
         {

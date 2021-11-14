@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Program
+class Program20
 {
     private char winChar;
 
@@ -223,7 +223,7 @@ class Program
         int moveCount = 0; // check loss
         char askMove; // display X or Y in question
         int selTemp;
-        Program prog = new Program();
+        Program20 prog = new Program20();
         prog._error = false;
         prog.box1 = ' ';
         prog.box2 = ' ';

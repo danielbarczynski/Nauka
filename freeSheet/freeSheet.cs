@@ -1,19 +1,25 @@
 ﻿using System;
+using System.Linq;
+using freeSheet.things;
 
 namespace freeSheet
 {
     class Program
     {
 
-        static double GetPowered()
+        static void Main(string[] args)
         {
-            double x = Convert.ToDouble(Console.ReadLine());
-            return(x*x);
-        }
 
-        static void Main() 
-        {
-            Console.WriteLine(GetPowered());
-        }       
+            string a = "krowa";
+            string b = null;
+            int d = 5;
+            int e = null;
+            //Console.WriteLine(a);
+            Console.Write(b);
+            Console.WriteLine(e);
+            
+
+        }
     }
+
 }

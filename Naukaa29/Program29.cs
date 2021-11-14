@@ -57,7 +57,7 @@ namespace WzorzecAdapter
     }
 
 
-    public class Program
+    public class Program29
     {
 
         static void Main(string[] args)

@@ -2,7 +2,7 @@
 
 namespace Nauka
 {
-    class Program
+    class Program1
     {
         static void Main(string[] args) // ponieważ void to static zmienne poza tą metodą muszą zawierać ten keyword, nie można w niej napisać public!
         {
