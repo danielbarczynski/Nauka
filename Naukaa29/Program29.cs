@@ -1,81 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Xml;
 
 namespace WzorzecAdapter
 {
-    //KOD Z ZEWNĘTRZNEJ BIBLIOTEKI
+    /* UDAŁO SIĘ! Znaczy udało mi się w końcu rozgryźć o co tu chodzi. 
+    Wciąż nie wiem jak zapisać to jako tablice, żeby mi drukowało osobe jedna pod drugą, 
+    ale pogłówkuję jeszcze nad tym. Póki co wysyłam taką wersję.
+    UPDATE: Usunąłem całą zawartość kodu z xml, bo mi przeszkadzał
+    UPDATE2: Udało się wydrukować dane jedno pod drugim! */
+
     public class UsersApi
     {
-        public async Task<string> GetUsersXmlAsync()
+        public async Task<string> GetUsersCsvAsync()
         {
-            var apiResponse = "<?xml version= \"1.0\" encoding= \"UTF-8\"?><users><user name=\"John\" surname=\"Doe\"/>" +
-            "<user name=\"John\" surname=\"Wayne\"/><user name=\"John\" surname=\"Rambo\"/></users>";
+            string csv = "AdamNowak,KatarzynaKowalska,WojciechJankowski";
+            // to chyba źle, ale nie mam pojęcia jak to inaczej zapisać
+            // próbowałem dla ułatwienia od razu jako array zapisać, ale nic z tego
+            //update: dobra już wiem o co chodzi
+            return await Task.FromResult(csv);
 
-            XmlDocument doc = new ();
-            doc.LoadXml(apiResponse);
-
-            return await Task.FromResult(doc.InnerXml);
         }
+
     }
 
-    public interface IUserRepository
+    public interface ICsv
     {
         List<string> GetUserNames();
     }
 
-    public class UsersRepositoryAdapter : IUserRepository
+    public class CsvAdapter : ICsv
     {
-        private UsersApi _adaptee = null;
+        private UsersApi adaptee;
 
-        public UsersRepositoryAdapter(UsersApi adaptee)
+        public CsvAdapter(UsersApi adaptee)
         {
-            _adaptee = adaptee;
+            this.adaptee = adaptee;
         }
-
         public List<string> GetUserNames()
         {
-            string incompatibleApiResponse = this._adaptee.GetUsersXmlAsync().GetAwaiter().GetResult();
+            string csv = adaptee.GetUsersCsvAsync().GetAwaiter().GetResult();
 
-            XmlDocument doc = new ();
-            doc.LoadXml(incompatibleApiResponse);
+            List<string> users = new List<string>();
+            List<string[]> userss = new List<string[]>();
+            //update: tablica, by nie drukowało danych jako jednego stringa
+            userss.Add(csv.Split(','));
 
-            var rootEl = doc.LastChild;
-
-            List<string> userNames = new ();
-
-            if (rootEl.HasChildNodes)
+            foreach (var x in userss)
             {
-                foreach (XmlNode user in rootEl.ChildNodes)
+                foreach (var xx in x)
                 {
-                    userNames.Add(user.Attributes["name"].InnerText + user.Attributes["surname"].InnerText);
+                    users.Add(xx);
+                    Console.WriteLine(xx);
                 }
             }
-            return userNames;
+
+            return users;
+
         }
     }
 
-
-    public class Program29
+    public class Program
     {
 
         static void Main(string[] args)
         {
-            UsersApi userRepository = new ();
 
-            IUserRepository adapter = new UsersRepositoryAdapter(userRepository);
+            UsersApi userApi = new UsersApi();
+            CsvAdapter csvAdapter = new CsvAdapter(userApi);
 
-            List<string> users = adapter.GetUserNames();
-            foreach (var userName in users)
-            {
-                Console.WriteLine(userName);
-            }
-
-           // var csvData = "kolumna1,kolumna2,kolumna3";
+            List<string> users = csvAdapter.GetUserNames();
         }
 
     }
-
-
 }

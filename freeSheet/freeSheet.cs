@@ -1,25 +1,35 @@
 ﻿using System;
-using System.Linq;
-using freeSheet.things;
+using System.Collections.Generic;
 
 namespace freeSheet
 {
-    class Program
+    class freeSheet
     {
-
-        static void Main(string[] args)
+        static void Main ()
         {
+            string vars = "AdamKowalski,OlekKopijka";
 
-            string a = "krowa";
-            string b = null;
-            int d = 5;
-            int e = null;
-            //Console.WriteLine(a);
-            Console.Write(b);
-            Console.WriteLine(e);
-            
+            List<string> list = new();
+            List<string[]> listt = new();
+            listt.Add(vars.Split(','));
+
+            foreach (var x in listt)
+            {
+                foreach (var xx in x)
+                {
+                    list.Add(xx);
+                    Console.WriteLine(xx);
+                }
+            } 
+           
+            //foreach (var x in list)
+            //{
+            //    Console.WriteLine(x);
+            //}
 
         }
+
     }
 
 }
+

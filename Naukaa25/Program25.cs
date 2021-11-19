@@ -4,9 +4,11 @@ using System.Collections.Generic;
 namespace Prototype
 {
 
-    public abstract class <nazwa-klasy>
+    public abstract class ProductPrototype
     {
+
   public readonly decimal Price;
+
     public ProductPrototype(decimal price)
     {
         Console.WriteLine("Executing constructor");
@@ -19,10 +21,14 @@ namespace Prototype
     }
 }
 
-public class Bread : ProductPrototype
-{
+
+    //----------------------------------------------------------
+
+
+    public class Bread : ProductPrototype
+    {
     public Bread(decimal price) : base(price) { }
-}
+    }
 
 public class Supermarket
 {
@@ -39,6 +45,9 @@ public class Supermarket
         var objectToCLone =
       return < powinno - zwracac - klon - produktu >
     }
+
+
+
     Dictionary<string, int> products;// 2 type, key and value
   {
     // for example 
@@ -59,6 +68,7 @@ class MainClass
         Supermarket supermarket = new Supermarket();
         var firstBread = new Bread(1.20);
         supermarket.AddProduct("Bread", firstBread);
+
 
         // tworzymy chleb, klonujemy drugi, dodajemy masło + rabat 10%
 
