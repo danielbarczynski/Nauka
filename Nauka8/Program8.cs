@@ -6,6 +6,20 @@ namespace Nauka8
     {
         static void Main(string[] args)
         {
+
+            try
+            {
+                int n1 = Convert.ToInt32(Console.ReadLine());
+                int n2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine(n1 / n2);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            //nie trzeba nawet nic pisac w catch, nie zawiesi juz programu
+
             Console.WriteLine("Enter x:");
             int.TryParse(Console.ReadLine(), out int x);
             Console.WriteLine("Enter y:");

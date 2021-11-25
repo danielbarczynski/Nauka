@@ -61,10 +61,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa28(absFactory)", "Nau
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa29(adapter)", "Naukaa29\Naukaa29(adapter).csproj", "{F3C0B276-0BA1-48B1-94D1-9BDB6E5C2F37}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "freeSheet", "freeSheet\freeSheet.csproj", "{950A735D-E539-4022-A2A4-F50E902FC46B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSheet", "freeSheet\FreeSheet.csproj", "{950A735D-E539-4022-A2A4-F50E902FC46B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0EF6F4D-0617-4630-9755-51A8A28D561E}"
 	ProjectSection(SolutionItems) = preProject
+		git.txt = git.txt
 		notes.txt = notes.txt
 	EndProjectSection
 EndProject
@@ -74,7 +75,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa31(this)", "Naukaa31\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa32(guessingGame)", "Naukaa32(guessingGame)\Naukaa32(guessingGame).csproj", "{F7163D01-359F-4372-AA26-B778493A2368}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa33(prototype)", "Naukaa34(prototype)\Naukaa33(prototype).csproj", "{898A7312-9EC9-46E5-B711-7422254846C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa33(prototype)", "Naukaa34(prototype)\Naukaa33(prototype).csproj", "{898A7312-9EC9-46E5-B711-7422254846C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa34(decorator)", "Naukaa33(decorator)\Naukaa34(decorator).csproj", "{D3768551-0362-4D70-AA90-B366C6CF3A57}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa35(facade)", "Naukaa35(fasada)\Naukaa35(facade).csproj", "{A9A8F5F5-94C1-4817-92BE-3BFD65A61AB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa36(bridge)", "Naukaa36(bridge)\Naukaa36(bridge).csproj", "{A7D34C78-B94C-405B-ABE7-17B784DC594F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa37(getSet)", "Naukaa36(getSet)\Naukaa37(getSet).csproj", "{562592BE-D562-4DFD-B092-67741A079B1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa38(static)", "Naukaa38(static)\Naukaa38(static).csproj", "{A6ABF252-0309-4DAB-9556-F124728D4A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa39(virtual)", "Naukaa39(virtual)\Naukaa39(virtual).csproj", "{B275532E-1AC6-4047-B55E-EFBEBAF3AE4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -218,6 +231,30 @@ Global
 		{898A7312-9EC9-46E5-B711-7422254846C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{898A7312-9EC9-46E5-B711-7422254846C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{898A7312-9EC9-46E5-B711-7422254846C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3768551-0362-4D70-AA90-B366C6CF3A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3768551-0362-4D70-AA90-B366C6CF3A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3768551-0362-4D70-AA90-B366C6CF3A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3768551-0362-4D70-AA90-B366C6CF3A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9A8F5F5-94C1-4817-92BE-3BFD65A61AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A8F5F5-94C1-4817-92BE-3BFD65A61AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A8F5F5-94C1-4817-92BE-3BFD65A61AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A8F5F5-94C1-4817-92BE-3BFD65A61AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7D34C78-B94C-405B-ABE7-17B784DC594F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D34C78-B94C-405B-ABE7-17B784DC594F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D34C78-B94C-405B-ABE7-17B784DC594F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7D34C78-B94C-405B-ABE7-17B784DC594F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562592BE-D562-4DFD-B092-67741A079B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562592BE-D562-4DFD-B092-67741A079B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562592BE-D562-4DFD-B092-67741A079B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562592BE-D562-4DFD-B092-67741A079B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6ABF252-0309-4DAB-9556-F124728D4A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6ABF252-0309-4DAB-9556-F124728D4A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6ABF252-0309-4DAB-9556-F124728D4A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6ABF252-0309-4DAB-9556-F124728D4A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B275532E-1AC6-4047-B55E-EFBEBAF3AE4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B275532E-1AC6-4047-B55E-EFBEBAF3AE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B275532E-1AC6-4047-B55E-EFBEBAF3AE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B275532E-1AC6-4047-B55E-EFBEBAF3AE4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,7 +18,8 @@ namespace Nauka6
 
             foreach (int item in a5)
             {
-                Console.WriteLine(item.ToString());
+                //Console.WriteLine(item.ToString());
+                Console.WriteLine(item);
             }
         }
     }
