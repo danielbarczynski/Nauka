@@ -2,7 +2,7 @@
 
 namespace Naukaa39_virtual_
 {
-    class Program
+    class Program39
     {
         static void Main(string[] args)
         {

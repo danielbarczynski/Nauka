@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
@@ -13,9 +12,9 @@ namespace WzorzecFasada
 
     static class EmailNotification
     {
-        public static void SendEmail(string to, string subject)
-        {
-            Console.WriteLine("Sending an email");
+        public static void SendEmail(string welcome, string user) // notyfikacja sie nie wysylala, bo przeciez te zmienne nie byly nigdzie przypisane
+        {            
+            Console.WriteLine($"{welcome} {user}");           
         }
     }
 
@@ -26,29 +25,48 @@ namespace WzorzecFasada
             "john.doe@gmail.com", "sylvester.stallone@gmail.com"
         };
 
-        public static bool IsEmailFree(string email)
+        public static bool IsEmailFree(string email) 
         {
-            //try
-            //{
-            //    users.Add("");
-            //    return true;
-            //}
-            //catch (Exception)
-            //{
-            //    return false;
-            //}
-            users.Contains("");
-            return true;
-
-            //throw new NotImplementedException();
-            //dopisz implementacje, która zwróci informacje o tym czy email jest dostępny
+            if (users.Contains(email))
+            {
+                return true;// jesli zawiera mail (true) zwroci go metodzie
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void AddUser(string email)
         {
-            users.Add("something");
-            //throw new NotImplementedException();
-            //dopisz implementacje, która doda użytkownika do listy
+            users.Add(email);            
+        }
+
+        public void DeleteUser(string email)
+        {
+            users.Remove(email);
+        }
+
+        public bool Exist(string email)
+        {
+            if (users.Contains(email))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void ListOfUsers() // na mój użytek
+        {
+            Console.WriteLine("\nAll users:");
+
+            foreach (var x in users)
+            {
+                Console.WriteLine(x);
+            }
         }
     }
 
@@ -65,30 +83,47 @@ namespace WzorzecFasada
     class UserService : IUserService
     {
         private readonly UserRepository userRepository = new UserRepository();
+
         public void CreateUser(string email)
         {
             if (!Validators.IsValidEmail(email))
             {
-                throw new ArgumentException("Błędny email");
+                throw new ArgumentException("The email is not valid"); // do siebie: "the email" zamiast "an email" ponieważ mówimy o konkretnym adresie email
             }
-            if (!UserRepository.IsEmailFree(email))
+            if (UserRepository.IsEmailFree(email)) // usunąłem negacje
             {
-                throw new ArgumentException("Email zajęty");
+                throw new ArgumentException("The email is already taken"); // metoda odbiera info o duplikacie, wyrzuca błąd
             }
-
-            // TODO: dodaj sprawdzenie czy email jest wolny, jeśli nie to wyrzuć wyjątek, jeśli tak, kontynuuj wykonywanie funkcji
 
             userRepository.AddUser(email);
-            EmailNotification.SendEmail(email, "Welcome to our service");
+            EmailNotification.SendEmail("Welcome to our service", email); // string welcome, string user
+            userRepository.ListOfUsers(); // na mój użytek // update: okazuje się, że potrzebna przy usuwaniu, haha
         }
+
+        public void DeleteUser(string email)
+        {
+            if (!userRepository.Exist(email))
+            {
+                throw new ArgumentException("This email does not exist");
+            }
+            userRepository.DeleteUser(email);
+            EmailNotification.SendEmail("Your account has been deleted", email);
+            userRepository.ListOfUsers();
+        }
+
     }
 
     class Program35
     {
         static void Main(string[] args)
         {
-            IUserService userService = new UserService();
-            userService.CreateUser("someemail@gmail.com");
+            UserService userService = new UserService();
+            userService.CreateUser("john.wick@gmail.com");
+            //userService.CreateUser("john.wick@gmail.com"); // sprawdzalem czy wyrzuci błąd o duplikacie, wyrzuca
+            //userService.CreateUser("smok tabaluga"); // sprawdzalem czy wyrzuci blad o błąd nazwie, wyrzuca
+            Console.WriteLine();
+            userService.DeleteUser("john.wick@gmail.com");
+            //userService.DeleteUser("john.wick@gmail.com"); // sprawdzałem czy wyrzuca bład o nieistniejącym koncie, wyrzuca
         }
     }
 

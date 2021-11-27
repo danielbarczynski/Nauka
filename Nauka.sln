@@ -83,11 +83,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa35(facade)", "Naukaa3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa36(bridge)", "Naukaa36(bridge)\Naukaa36(bridge).csproj", "{A7D34C78-B94C-405B-ABE7-17B784DC594F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa37(getSet)", "Naukaa36(getSet)\Naukaa37(getSet).csproj", "{562592BE-D562-4DFD-B092-67741A079B1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa37(getSet)", "Naukaa36(getSet)\Naukaa37(getSet).csproj", "{562592BE-D562-4DFD-B092-67741A079B1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa38(static)", "Naukaa38(static)\Naukaa38(static).csproj", "{A6ABF252-0309-4DAB-9556-F124728D4A2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa38(static)", "Naukaa38(static)\Naukaa38(static).csproj", "{A6ABF252-0309-4DAB-9556-F124728D4A2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa39(virtual)", "Naukaa39(virtual)\Naukaa39(virtual).csproj", "{B275532E-1AC6-4047-B55E-EFBEBAF3AE4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa39(virtual)", "Naukaa39(virtual)\Naukaa39(virtual).csproj", "{B275532E-1AC6-4047-B55E-EFBEBAF3AE4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
