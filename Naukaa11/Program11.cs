@@ -25,11 +25,11 @@ namespace Naukaa11
         }
     }
 
-    class Player
+    public class Player
     {
         // Fields (if no "=", automatically set to default: int -> 0, string -> "")
 
-        private int age; // private (by default) - no access outside, prywatne dane
+        internal int age; // private (by default) - no access outside, prywatne dane //@UPDATE: ZMIENONE NA INTERNAL NA POTRZEBY PROJEKTU
         public string name; // public - free access outside, publiczne dane
                            
         public void SetAge(int a) // void czyli nie zwraca nic

@@ -1,15 +1,10 @@
-﻿// ADDED PROJ11 REFERENCE !!!!
-using Naukaa11_class_;
-
-namespace FreeSheet
+﻿namespace Naukaa49_interface2_
 {
-    class FreeSheet
+    class Program49
     {
         static void Main(string[] args)
         {
-            var Dog = new Dog();
-            Dog.Skok(); 
-            
+            Dog.Skok();
         }
 
 
@@ -23,7 +18,7 @@ namespace FreeSheet
 
     class Dog
     {
-        public void Skok()
+        public static void Skok() //cannot be overrided, it is not abstract
         {
             System.Console.WriteLine("Pies skacze");
         }

@@ -8,9 +8,9 @@ namespace Naukaa18
     public class CatsGenerator
     {
 
-        public List<CatModel> CatsList = new List<CatModel>();     
+        public static List<CatModel> CatsList = new List<CatModel>();     
 
-        public void Genenerate5Cats()
+        public static void Genenerate5Cats()
         {
             for (int i = 0; i < 5; i++)
             {
@@ -19,16 +19,20 @@ namespace Naukaa18
                     Age = i + 1,
                     Name = "Kotek" + i.ToString()
                 });
-            }
-          
+            }      
 
             foreach (var CatModel in CatsList)
             {
-                Console.WriteLine(CatModel.Name);
-                Console.WriteLine(CatModel.Age);
+                Console.WriteLine(CatModel.Name + " " + CatModel.Age);
             }
-
         }
+
+         static void Main(string[] args)
+        {
+            Genenerate5Cats();
+        }
+
+
     }
     public class CatModel
     {
