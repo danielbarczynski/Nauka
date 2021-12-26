@@ -83,7 +83,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa35(facade)", "Naukaa3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa36(bridge)", "Naukaa36(bridge)\Naukaa36(bridge).csproj", "{A7D34C78-B94C-405B-ABE7-17B784DC594F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa37(getSet)", "Naukaa36(getSet)\Naukaa37(getSet).csproj", "{562592BE-D562-4DFD-B092-67741A079B1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa37(getSet2)", "Naukaa36(getSet)\Naukaa37(getSet2).csproj", "{562592BE-D562-4DFD-B092-67741A079B1C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa38(static)", "Naukaa38(static)\Naukaa38(static).csproj", "{A6ABF252-0309-4DAB-9556-F124728D4A2C}"
 EndProject
@@ -109,9 +109,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa48(protected)", "Nauk
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa49(interface2)", "Naukaa49(interface2)\Naukaa49(interface2).csproj", "{87E72FEE-8668-47AC-B8F0-F097CBACEFC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa50(internal)", "Naukaa50(internal)\Naukaa50(internal).csproj", "{B2107374-B21E-4C89-9191-C00D635AA72C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa50(internal)", "Naukaa50(internal)\Naukaa50(internal).csproj", "{B2107374-B21E-4C89-9191-C00D635AA72C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa51(base)", "Naukaa51(base)\Naukaa51(base).csproj", "{06B0B399-2D03-4482-A9C7-D8A579CBE4B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa51(base)", "Naukaa51(base)\Naukaa51(base).csproj", "{06B0B399-2D03-4482-A9C7-D8A579CBE4B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa52(delegate)", "Naukaa52(delegate)\Naukaa52(delegate).csproj", "{A06A7929-B281-4E49-BCF9-ADFF93C9DD58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa53(delegate2)", "Naukaa53(delegate2)\Naukaa53(delegate2).csproj", "{346895FC-6029-4717-B30A-4EAC6BADDD5D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa54(delegate3)", "Naukaa54(delegate3)\Naukaa54(delegate3).csproj", "{08EBAF6B-DF12-4337-BB23-8335852E10F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa55(lambda)", "Naukaa55(lambda)\Naukaa55(lambda).csproj", "{1EE53BEF-33D3-4DCB-ABA2-1C9D5401AB9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa56(partial)", "Naukaa56(partial)\Naukaa56(partial).csproj", "{CB8379DE-EAE1-4C8B-97D6-4036F2F8DE55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -327,6 +337,26 @@ Global
 		{06B0B399-2D03-4482-A9C7-D8A579CBE4B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06B0B399-2D03-4482-A9C7-D8A579CBE4B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06B0B399-2D03-4482-A9C7-D8A579CBE4B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A06A7929-B281-4E49-BCF9-ADFF93C9DD58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06A7929-B281-4E49-BCF9-ADFF93C9DD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06A7929-B281-4E49-BCF9-ADFF93C9DD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06A7929-B281-4E49-BCF9-ADFF93C9DD58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{346895FC-6029-4717-B30A-4EAC6BADDD5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346895FC-6029-4717-B30A-4EAC6BADDD5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346895FC-6029-4717-B30A-4EAC6BADDD5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346895FC-6029-4717-B30A-4EAC6BADDD5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08EBAF6B-DF12-4337-BB23-8335852E10F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08EBAF6B-DF12-4337-BB23-8335852E10F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08EBAF6B-DF12-4337-BB23-8335852E10F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08EBAF6B-DF12-4337-BB23-8335852E10F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EE53BEF-33D3-4DCB-ABA2-1C9D5401AB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EE53BEF-33D3-4DCB-ABA2-1C9D5401AB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EE53BEF-33D3-4DCB-ABA2-1C9D5401AB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE53BEF-33D3-4DCB-ABA2-1C9D5401AB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB8379DE-EAE1-4C8B-97D6-4036F2F8DE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB8379DE-EAE1-4C8B-97D6-4036F2F8DE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB8379DE-EAE1-4C8B-97D6-4036F2F8DE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB8379DE-EAE1-4C8B-97D6-4036F2F8DE55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

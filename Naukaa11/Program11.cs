@@ -14,8 +14,10 @@ namespace Naukaa11
             player2.name = "Bob";
             player2.SetAge(-22);
 
-            Cat cat1 = new ();
-
+            //Cat cat1 = new ();
+            Cat cat1;
+            cat1 = new Cat();
+            
             cat1.Name = "Kotek";
             cat1.Age = 10;
 

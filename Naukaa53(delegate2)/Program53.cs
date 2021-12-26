@@ -3,8 +3,7 @@ using System.Collections.Generic;
 
 namespace Naukaa53_delegate2_
 {
-
-    delegate bool IsPromotable(Employee emp);
+    delegate bool IsPromotable(Employee emp); //#1 parametr musi byc, tak jak jest w metodzie, by dzialalo utworzenie instancji
 
     internal class Program53
     {
@@ -16,14 +15,19 @@ namespace Naukaa53_delegate2_
             list.Add(new Employee() { Id = 3, Name = "John", Salary = 13000, Experience = 15 });
             list.Add(new Employee() { Id = 4, Name = "Mika", Salary = 5000, Experience = 4 });
 
+            //Employee.PromoteEmployee(list);
 
-            IsPromotable isPromotable = new IsPromotable(Promote);
-            Employee.PromoteEmployee(list, isPromotable);
+            IsPromotable isPromotable = new IsPromotable(Promote); // dziala dopiero po uzupelnieniu delegacji(#1), poniewaz Promote bierze arugemnt emp
+            Employee.PromoteEmployee(list, isPromotable); // lub z lambdą (list, emp => emp.Experience >= 5) nie trzeba wtedy metody Promote
         }
 
-        public static bool Promote(Employee emp)
+        public static bool Promote(Employee emp) // zawarte w delegacji
         {
             if (emp.Experience >= 5)
+            {
+                return true;
+            }
+            if (emp.Salary <= 4000)
             {
                 return true;
             }
@@ -41,15 +45,12 @@ namespace Naukaa53_delegate2_
         public int Salary { get; set; }
         public int Experience { get; set; }
 
-        public static void whatever()
+
+        public static void PromoteEmployee(List<Employee> list, IsPromotable isPromotable) // delegacja z metodą bool, przekazana do nowej metody
         {
-            Console.WriteLine("w");
-        }
-        public static void PromoteEmployee(List<Employee> list, IsPromotable isPromotable)
-        {
-            foreach (Employee emp in list)
+            foreach (Employee emp in list) // uzycie list
             {
-                if (isPromotable(emp)) // juz bez hardkodowania
+                if (isPromotable(emp)) // uzycie isPromotable, juz bez hardkodowania
                 {
                     Console.WriteLine($"Employee promoted {emp.Name}");
                 }

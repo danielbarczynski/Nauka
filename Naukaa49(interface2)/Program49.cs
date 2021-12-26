@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Dog.Skok();
+            Console.WriteLine();
         }
 
 
@@ -18,9 +19,20 @@
 
     class Dog
     {
+        public int Id { get; set; }
         public static void Skok() //cannot be overrided, it is not abstract
         {
             System.Console.WriteLine("Pies skacze");
         }
+    }
+    
+    class ForDogs : Dog
+    {
+        Dog Dog1 { get; set; } // get; set; dla obiektu klasy 
+        
+
+        Dog dog = new Dog();
+
+
     }
 }

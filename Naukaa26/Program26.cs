@@ -3,25 +3,47 @@
 namespace Naukaa27
 {
 
-    //public abstract class Player
-    //{
-    //    public abstract void returnString();
-    //}
-    // klasy abstract służa za bazę dla innych klas które będą je impleentować, nie można ich używać #1
-    public abstract class SuperPlayer //: Player, specjalny błąd, usunąć abstract
+
+    public abstract class Ball
     {
-        public /*override*/ void returnString()
+        public abstract int returnInt(); // by działało, klasa MUSI być abstrakcyjna
+        //public int returnInt(); // to nie zadziała, bo nie jest abstract
+        public abstract double returnDouble();
+        public abstract void returnString();
+        public abstract void returnString2<T>(T value);
+    }
+    public class SuperBall : Ball // jeśli tutaj również nie chcemy implementacji metody, możemy oznaczyć również klasę jako abstract, tylko wtedy juz jej nie utworzymy
+    {
+        public override int returnInt()
         {
-            Console.WriteLine("cośTam");
+            return 5;
+        }
+        public override double returnDouble()
+        {
+            return 2.5;
+        }
+        public override void returnString()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void returnString2<T>(T value)
+        {
+            Console.WriteLine(value);
         }
     }
 
-    class Program26
+    abstract class Program26 
     {
+
         static void Main(string[] args)
         {
-            SuperPlayer Player1 = new SuperPlayer(); // (#1) abstrakcyjnych klas nie można używać, musiałbym zaintemplementować nową i tą nową uzyć
-            Player1.returnString();
+            SuperBall super = new SuperBall();
+            Console.WriteLine(super.returnInt());
+            Console.WriteLine(super.returnDouble());
+            //super.returnString(); // wyrzuci exception
+            super.returnString2(1);
+            super.returnString2("something");
         }
     }
 }

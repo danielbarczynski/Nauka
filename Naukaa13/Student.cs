@@ -29,5 +29,9 @@ namespace Naukaa13_getSet_
                 _iq = value;
             }
         }
+
+        public string Surname { get => _surname; set => _surname = value; } // created by "encapsulate"
+
+        string _surname;
     }
 }
