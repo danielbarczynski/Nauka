@@ -1,70 +1,103 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace Naukaa53_delegate2_
+public interface IPolecenie
 {
+    void wykonaj();
+}
 
-    delegate bool IsPromotable(Employee emp);
+public class KomendaWlacz : IPolecenie
+{
+    private Lampa _lampa;
 
-    internal class Program53
+    public KomendaWlacz(Lampa lampa)
     {
-        static void Main(string[] args)
-        {
-            List<Employee> list = new List<Employee>();
-            list.Add(new Employee() { Id = 1, Name = "Mary", Salary = 3000, Experience = 1 });
-            list.Add(new Employee() { Id = 2, Name = "James", Salary = 7000, Experience = 5 });
-            list.Add(new Employee() { Id = 3, Name = "John", Salary = 13000, Experience = 15 });
-            list.Add(new Employee() { Id = 4, Name = "Mika", Salary = 5000, Experience = 4 });
+        _lampa = lampa;
+    }
+    public void wykonaj()
+    {
+        _lampa.wlacz();
+    }
+}
+
+public class KomendaWylacz : IPolecenie
+{
+    private Lampa _lampa;
+
+    public KomendaWylacz(Lampa lampa)
+    {
+        _lampa = lampa;
+    }
+    public void wykonaj()
+    {
+        _lampa.wylacz();
+    }
+}
 
 
-            IsPromotable isPromotable = new IsPromotable(Promote);
-            Employee.PromoteEmployee(list, isPromotable);
-        }
+public class Lampa
+{
+    private bool _stan;
 
-        public static bool Promote(Employee emp)
-        {
-            if (emp.Experience >= 5)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+    public Lampa()
+    {
+        _stan = false;
     }
 
-    class Employee
+    public void wlacz()
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Salary { get; set; }
-        public int Experience { get; set; }
+        _stan = true;
+    }
 
-        public static void whatever()
+    public void wylacz()
+    {
+        _stan = false;
+    }
+
+    public bool sprawdz()
+    {
+        return _stan;
+    }
+}
+
+
+public class Pilot
+{
+    private IPolecenie _polecenie;
+
+    public void ustawPolecenie(IPolecenie polecenie)
+    {
+        _polecenie = polecenie;
+    }
+
+    public void wcisnijGuzik()
+    {
+        _polecenie.wykonaj();
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        var lampa = new Lampa();
+        var pilot = new Pilot();
+        IPolecenie wlacz = new KomendaWlacz(lampa);
+        IPolecenie wylacz = new KomendaWylacz(lampa);
+
+        void displayState(Lampa lampa)
         {
-            Console.WriteLine("w");
-        }
-        public static void PromoteEmployee(List<Employee> list, IsPromotable isPromotable)
-        {
-            foreach (Employee emp in list)
-            {
-                if (isPromotable(emp)) // juz bez hardkodowania
-                {
-                    Console.WriteLine($"Employee promoted {emp.Name}");
-                }
-            }
+            Console.WriteLine(lampa.sprawdz() ? "Lampa włączona" : "Lampa wyłączona");
         }
 
-        //public static void PromoteEmployee(List<Employee> list)
-        //{
-        //    foreach (Employee emp in list)
-        //    {
-        //        if (emp.Experience >= 5) // pętla if w pętli forach. Jest to hardkodowanie
-        //        {
-        //            Console.WriteLine($"Employee promoted {emp.Name}");
-        //        }
-        //    }
-        //}
+        displayState(lampa);
+
+        pilot.ustawPolecenie(wlacz);
+        pilot.wcisnijGuzik();
+        displayState(lampa);
+
+        pilot.ustawPolecenie(wylacz);
+        pilot.wcisnijGuzik();
+        displayState(lampa);
     }
 }

@@ -8,8 +8,8 @@ namespace Naukaa13_getSet_
 {
     internal class Student
     {
-        //int id = 0;
-        //public int Id  { get => id; private set => id = value; }    
+        int idd = 0;
+        public int Idd  { get => idd; private set => idd = value; }    // return idd
         public int Id { get; private set; } = 0;
         public string Name { get; set; } = "JSON";
         public int Age { get; set; } = 20;
