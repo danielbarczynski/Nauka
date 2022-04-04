@@ -1,103 +1,26 @@
-﻿using System;
+﻿using freeSheet.things;
+using System;
+using static FreeSheet2.FreeSheet2;
 
-public interface IPolecenie
+namespace FreeSheet // ADDED FREESHEET2 REFERENCE
 {
-    void wykonaj();
-}
-
-public class KomendaWlacz : IPolecenie
-{
-    private Lampa _lampa;
-
-    public KomendaWlacz(Lampa lampa)
+     class FreeSheet : Horse
     {
-        _lampa = lampa;
-    }
-    public void wykonaj()
-    {
-        _lampa.wlacz();
-    }
-}
-
-public class KomendaWylacz : IPolecenie
-{
-    private Lampa _lampa;
-
-    public KomendaWylacz(Lampa lampa)
-    {
-        _lampa = lampa;
-    }
-    public void wykonaj()
-    {
-        _lampa.wylacz();
-    }
-}
-
-
-public class Lampa
-{
-    private bool _stan;
-
-    public Lampa()
-    {
-        _stan = false;
-    }
-
-    public void wlacz()
-    {
-        _stan = true;
-    }
-
-    public void wylacz()
-    {
-        _stan = false;
-    }
-
-    public bool sprawdz()
-    {
-        return _stan;
-    }
-}
-
-
-public class Pilot
-{
-    private IPolecenie _polecenie;
-
-    public void ustawPolecenie(IPolecenie polecenie)
-    {
-        _polecenie = polecenie;
-    }
-
-    public void wcisnijGuzik()
-    {
-        _polecenie.wykonaj();
-    }
-}
-
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        var lampa = new Lampa();
-        var pilot = new Pilot();
-        IPolecenie wlacz = new KomendaWlacz(lampa);
-        IPolecenie wylacz = new KomendaWylacz(lampa);
-
-        void displayState(Lampa lampa)
+      
+        static void Main(string[] args)
         {
-            Console.WriteLine(lampa.sprawdz() ? "Lampa włączona" : "Lampa wyłączona");
+            FreeSheet freeSheet = new FreeSheet();
+            freeSheet.test();
         }
 
-        displayState(lampa);
-
-        pilot.ustawPolecenie(wlacz);
-        pilot.wcisnijGuzik();
-        displayState(lampa);
-
-        pilot.ustawPolecenie(wylacz);
-        pilot.wcisnijGuzik();
-        displayState(lampa);
+        public void test()
+        {
+            FreeSheet freeSheet = new FreeSheet();// musi byc tu, poniewaz klasa statyczna poza nia nie widzi
+            Horse horse = new Horse(); // class public so accessible
+            //horse.Name = "big"; // nie mozna gdy internal/protected internal
+            freeSheet.Name = "nope"; // odwolanie sie do naszej klasy (base) ktora dziedziczy i z niej wziecie property
+            Console.WriteLine(freeSheet.Name);
+            Console.WriteLine(base.Name = "big");
+        }
     }
 }

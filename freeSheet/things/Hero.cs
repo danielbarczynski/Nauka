@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static FreeSheet.FreeSheet;
 
 namespace freeSheet.things
 {
-     public static class Hero
+     public class Hero
     {
-        public static string Name;
-        public static int Age;
+        internal static string Name = "Mero";
+        public static int Age = 15;
 
         //public Hero() // ctor snippet
         //{

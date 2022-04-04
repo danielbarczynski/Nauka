@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa10(method)", "Nauka10\Naukaa10(method).csproj", "{DAA03050-6939-4933-AD8D-335ADC1B4F1B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa11(class)", "Naukaa11\Naukaa11(class).csproj", "{0692AD1E-1EBF-475C-872A-9FC4F17F2E9E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa12(constructor)", "Naukaa12\Naukaa12(constructor).csproj", "{D4DDA54D-510B-4D5A-BDA6-E9D5678B5836}"
@@ -136,7 +134,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa61(command)", "Naukaa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa62(mediator)", "Naukaa62(mediator)\Naukaa62(mediator).csproj", "{2D6138A7-D099-4DDA-8A87-512536AF4BC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa63(strategy)", "Naukaa63(strategy)\Naukaa63(strategy).csproj", "{FCDE7177-AABB-4769-81C3-16AB0429E466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa63(strategy)", "Naukaa63(strategy)\Naukaa63(strategy).csproj", "{FCDE7177-AABB-4769-81C3-16AB0429E466}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa64(visitor)", "Naukaa64(visitor)\Naukaa64(visitor).csproj", "{324CA935-C712-439D-A563-C28C05E2C0D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSheet2", "FreeSheet2\FreeSheet2.csproj", "{852F72E0-6D5A-497F-B375-5B43245BBE3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa10(method)", "Naukaa10\Naukaa10(method).csproj", "{C5CD177D-FF6A-433B-9AFA-2412C9111ECF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -144,10 +148,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DAA03050-6939-4933-AD8D-335ADC1B4F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAA03050-6939-4933-AD8D-335ADC1B4F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAA03050-6939-4933-AD8D-335ADC1B4F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAA03050-6939-4933-AD8D-335ADC1B4F1B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0692AD1E-1EBF-475C-872A-9FC4F17F2E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0692AD1E-1EBF-475C-872A-9FC4F17F2E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0692AD1E-1EBF-475C-872A-9FC4F17F2E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -400,6 +400,18 @@ Global
 		{FCDE7177-AABB-4769-81C3-16AB0429E466}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCDE7177-AABB-4769-81C3-16AB0429E466}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCDE7177-AABB-4769-81C3-16AB0429E466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{324CA935-C712-439D-A563-C28C05E2C0D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{324CA935-C712-439D-A563-C28C05E2C0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{324CA935-C712-439D-A563-C28C05E2C0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{324CA935-C712-439D-A563-C28C05E2C0D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{852F72E0-6D5A-497F-B375-5B43245BBE3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852F72E0-6D5A-497F-B375-5B43245BBE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852F72E0-6D5A-497F-B375-5B43245BBE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852F72E0-6D5A-497F-B375-5B43245BBE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5CD177D-FF6A-433B-9AFA-2412C9111ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CD177D-FF6A-433B-9AFA-2412C9111ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CD177D-FF6A-433B-9AFA-2412C9111ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CD177D-FF6A-433B-9AFA-2412C9111ECF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
