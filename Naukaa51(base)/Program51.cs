@@ -40,7 +40,7 @@ namespace Naukaa51_base_
 
         public Sub(string name) : base(name) // wowczas juz nie wywoluje zwyklego konstruktora z base klasy, tylko ten wskazany z nejmem. 
         {// bez base(name) bylby blad, bo klasa dziedziczy, takze przy dziedziczeniu moze byc problem czesto konstuktorami jak nie dziedzicza rowniez
-
+            Console.WriteLine("hi");
             //Console.WriteLine($"sub z argumentem {name}");
             // odpali sie to co jest w base(name), nie musze tu nic pisac
         }

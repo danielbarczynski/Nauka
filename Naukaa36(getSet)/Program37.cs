@@ -35,6 +35,7 @@ namespace Naukaa37_getSet_
 
         public string status 
         {
+            
             get // snippet: propfull
             {
                 return _status;
