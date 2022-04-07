@@ -38,7 +38,7 @@ namespace Naukaa58_outRef_
         public static void Outt(out int inside) // int outside uniewazniony
         {
             Console.WriteLine("Out:");
-            inside = 0;
+            inside = 10; // musimy ustalic w funkcji dana zmienna przy out
             inside = inside + 10;
             Console.WriteLine(inside);
         }

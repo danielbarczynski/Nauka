@@ -22,17 +22,32 @@ public static class StringExtensions
     }
 }
 
+
+
 public class Program
 {
+   
     static void Main(string[] args)
     {
         var title = "Programowanie w C#";
         title.Display();//Programowanie w C#
-
+        Program program = new Program();
         string xyz = "wombat";
         if(xyz is string)
         {
             Console.WriteLine("great!");
         }
+        Console.WriteLine(typeof(StreamReader));
+        Console.WriteLine(sizeof(ulong));
+
+        Object obj = new StringReader("Hi");
+        StringReader r = obj as StringReader;
+
+        double liczba = 3765.47;
+        int i;
+        // Konwersja typu doble na int - użycie operatora rzutowania;
+        i = (int)liczba;
+        // Rezultat wywołania takiego programu to: 3765
+        Console.WriteLine(i);
     }
 }
