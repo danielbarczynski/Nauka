@@ -148,7 +148,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa65(fieldVsProperty)",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa66(readonly)", "Naukaa66(readonly)\Naukaa66(readonly).csproj", "{644DE579-5DC5-4203-9C84-BE57DF749F20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa67(objectVsVar)", "Naukaa67(objectVsVar)\Naukaa67(objectVsVar).csproj", "{EFFACAC0-8570-4AF9-93A3-BA55A84E381E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa67(objectVarDynamic)", "Naukaa67(objectVsVar)\Naukaa67(objectVarDynamic).csproj", "{EFFACAC0-8570-4AF9-93A3-BA55A84E381E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

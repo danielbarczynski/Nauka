@@ -22,11 +22,6 @@ public static class StringExtensions
     }
 }
 
-object Cow
-{
-            public string name = "muu";
-        }
-
 public class Program
 {
     static void Main(string[] args)
@@ -34,16 +29,10 @@ public class Program
         var title = "Programowanie w C#";
         title.Display();//Programowanie w C#
 
-        //object vs var 
-
-        object a = 10;
-        object b = 20;
-        object c = (int)a + (int)b; // obiektowi mozna dopisac jakakolwiek zmienna
-        
-        Console.WriteLine(c);
-        var d = 5;
-        var e = 6;
-        var f = d + e; // przy var kompilator sam dopisuje (wyebiara) typ zmiennej
-        Console.WriteLine(f);
+        string xyz = "wombat";
+        if(xyz is string)
+        {
+            Console.WriteLine("great!");
+        }
     }
 }
