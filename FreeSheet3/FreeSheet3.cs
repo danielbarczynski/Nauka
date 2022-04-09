@@ -11,6 +11,7 @@
         InitAnInt(out n); // This is OK
                           //InitAnInt(out i); // ERROR: A property or indexer may not be passed 
                           // as an out or ref parameter
+
     }
 }
 
@@ -20,6 +21,9 @@ public static class StringExtensions
     {
         Console.WriteLine(value);
     }
+
+    public static void Nothing() => Console.WriteLine("nothing");
+
 }
 
 
@@ -49,5 +53,6 @@ public class Program
         i = (int)liczba;
         // Rezultat wywołania takiego programu to: 3765
         Console.WriteLine(i);
+        StringExtensions.Nothing();
     }
 }

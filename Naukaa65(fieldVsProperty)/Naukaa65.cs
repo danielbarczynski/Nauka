@@ -20,4 +20,11 @@
     // This is an AutoProperty (C# 3.0 and higher) - which is a shorthand syntax
     // used to generate a private field for you
     public int AnotherProperty { get; set; }
+
+    private string name;
+    public string Name // example of not auto-property
+    {
+        get => name; // instead of {return locactionName;}
+        set => name = value;
+    }
 }
