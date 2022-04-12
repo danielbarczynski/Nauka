@@ -2,15 +2,27 @@
 {
     class Program59
     {
+        // Anonymous methods are declared with the creation of the delegate instance, with a delegate keyword.For example:
+
+        delegate void NumberChanger(int n);
         static void Main(string[] args)
         {
+            NumberChanger nc = delegate (int x)
+            {
+                Console.WriteLine("Anonymous Method: {0}", x);
+            };
+
+
+            //-------------------------------------------------------------------------
+
             List<Employe> list2 = new List<Employe>();
-            list2.Add(new Employe() 
-            { 
-                Id = 1, Name = "Olaf" 
+            list2.Add(new Employe()
+            {
+                Id = 1,
+                Name = "Olaf"
             });
 
-            Predicate<Employe> predicate = new Predicate<Employe>(FindEmployee); // delegate! points to the method (FindEmployee)
+            Predicate<Employe> predicate = new Predicate<Employe>(FindEmployee); // delegate (definition)! points to the method (FindEmployee)
             Employe employe = list2.Find(employe => FindEmployee(employe));
             Console.WriteLine($"{employe.Id} {employe.Name}");
 
@@ -24,7 +36,7 @@
             };
 
             Employee employee =  // bez utwarzania metody delegacji, funkcja anonimowa
-            list.Find(delegate(Employee e) // delegate = Predicate // Predicate<T> (T obj) -- definition // nie wskazujemy na żadną utworzona przez nas metode
+            list.Find(delegate (Employee e) // delegate = Predicate // Predicate<T> (T obj) -- definition // nie wskazujemy na żadną utworzona przez nas metode
             {
                 return e.Id == 2;
             });
@@ -39,9 +51,9 @@
                 new Employeee() { Id = 3, Age = 40, Name = "Bartlomelo"}
             };
 
-            Employeee employeee = 
+            Employeee employeee =
             list3.Find(e => e.Id == 3); // domyślnie traktuje e jako Employee z listy i domyślnie zwraca bool == 3
-            
+
             int count =
             list3.Count(e => e.Name.StartsWith("B")); // anoother linq expression with lambda
 
@@ -58,7 +70,7 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-     
+
     }
     class Employee
     {

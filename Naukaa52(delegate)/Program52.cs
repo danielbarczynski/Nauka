@@ -3,11 +3,22 @@
 namespace Naukaa52_delegate_
 {
     public delegate void Delegate(string message);
+    public delegate void Delegatee(string text);
 
     internal class Program52
     {
         static void Main(string[] args)
         {
+
+            Delegatee delegatee = delegate (string text) // funkcja anonimowa
+            {
+                Console.WriteLine(text);
+            };
+
+
+            delegatee("whatever");
+
+            //-----------------------------------------------------------------
 
             Delegate Delegate, Delegate2, Delegate3, Delegate4; 
 

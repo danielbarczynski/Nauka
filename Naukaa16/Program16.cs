@@ -32,6 +32,8 @@ namespace Naukaa16
 
             for (int i = 0; i < list.Count; i++) // not get length, count because it is collection that can be expanded or reduced
                 Console.WriteLine(list[i]);
+
+
         }
     }
 }
