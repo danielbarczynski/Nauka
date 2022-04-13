@@ -19,7 +19,7 @@ class GFG
 
     // for action
 
-    public static void Actionn(bool isBool)
+    public void Actionn(bool isBool)
     {
         bool isBooll = isBool;
         Console.WriteLine(isBooll);
@@ -38,7 +38,7 @@ class GFG
 
         // można również używać z anonimowymi funkcjami
 
-        Action<bool> actionFunc = Actionn; // tylko jeden <T> argument, bo domyślnie jest void
-        Actionn(false);
+        Action<bool> actionFunc = new GFG().Actionn; // tylko jeden <T> argument, bo domyślnie jest void
+        actionFunc(false); // nie musimy przypisywac do obiektu metody. jakbysmy np mieli kilka metod z tym samym typem, latwiej tak operowac
     }
 }
