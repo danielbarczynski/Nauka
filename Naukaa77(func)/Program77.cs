@@ -25,8 +25,10 @@ class GFG
         Console.WriteLine(isBooll);
     }
 
+    // Main method
     static public void Main()
     {
+        // Using Func delegate Here, Func delegate contains the one parameters of int type one result parameter of int type
         Func<string, int> myfun = method; // (string (in)) & return int (out)
 
         Console.WriteLine(myfun("h"));
