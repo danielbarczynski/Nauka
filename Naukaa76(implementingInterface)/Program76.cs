@@ -47,7 +47,7 @@ public class Employee : IDetails
         return "Joe";
     }
 }
-    class Program
+    class Program76
 {
     //This also allows you to then get into things like Inversion Of Control where you would take an item in like this and you could pass a dog,
     //cat or parrot and the method would always work, not knowing or caring which animal it was:
