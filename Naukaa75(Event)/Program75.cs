@@ -12,6 +12,7 @@ namespace SampleApp
         {
             this.MyEvent += new MyDel(this.WelcomeUser);
         }
+     
 
         public string WelcomeUser(string username)
         {
@@ -20,6 +21,7 @@ namespace SampleApp
 
         static void Main(string[] args)
         {
+            Console.ReadLine();
             EventProgram obj1 = new EventProgram();
             string result = obj1.MyEvent("Tutorials Point"); // argument wziety od funkcji
             Console.WriteLine(result);

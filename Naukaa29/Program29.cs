@@ -18,7 +18,7 @@ namespace WzorzecAdapter
             // to chyba źle, ale nie mam pojęcia jak to inaczej zapisać
             // próbowałem dla ułatwienia od razu jako array zapisać, ale nic z tego
             //update: dobra już wiem o co chodzi
-            return await Task.FromResult(csv);
+            return await Task.Fromresult(csv);
 
         }
 
@@ -39,7 +39,7 @@ namespace WzorzecAdapter
         }
         public List<string> GetUserNames()
         {
-            string csv = adaptee.GetUsersCsvAsync().GetAwaiter().GetResult();
+            string csv = adaptee.GetUsersCsvAsync().GetAwaiter().Getresult();
 
             List<string> users = new List<string>();
             List<string[]> userss = new List<string[]>();

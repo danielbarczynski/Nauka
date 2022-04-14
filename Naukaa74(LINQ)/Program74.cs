@@ -73,7 +73,7 @@
         // z asp: (+ iqueryable)
 
         [HttpGet]
-        public async Task<IActionResult> List(string name)
+        public async Task<IActionresult> List(string name)
         {
             IQueryable<ProductEntity> productsQuery = _dbContext.Products;
             if (!string.IsNullOrEmpty(name))

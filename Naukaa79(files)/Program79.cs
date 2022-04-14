@@ -39,6 +39,8 @@ StreamWriter sw = File.CreateText(filePath2);
 
 sw.WriteLine("Hello there");
 sw.WriteLine("Cya!");
+string write = Console.ReadLine();
+sw.WriteLine(write);
 sw.Close();
 
 StreamReader sr = File.OpenText(filePath2);
