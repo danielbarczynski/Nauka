@@ -8,10 +8,10 @@ interface IInterface
 
 class Mega : IInterface
 {
-    // implementing interface implicitly
+    // implementing interface implicitly (niejawnie)
     public void Start() { }
 
-    // implementing interface explicitly
+    // implementing interface explicitly (jawnie)
 
     void IInterface.Stop() { }
 
