@@ -176,7 +176,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa78(json)", "Naukaa78(
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa79(files)", "Naukaa79(files)\Naukaa79(files).csproj", "{C39D0EA9-DACF-4910-83EE-8D71AE635D85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa80(xml)", "Naukaa80(xml)\Naukaa80(xml).csproj", "{F91B05F0-0C74-448E-A0F4-D250BC824F1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa80(xml)", "Naukaa80(xml)\Naukaa80(xml).csproj", "{F91B05F0-0C74-448E-A0F4-D250BC824F1B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa81(IDisposable)", "Naukaa81(IDisposable)\Naukaa81(IDisposable).csproj", "{46777CB9-8D28-4500-BCF7-04371062FBDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa82(record)", "Naukaa82(record)\Naukaa82(record).csproj", "{2803BE58-7179-4E5B-98F9-AA2E7D5D56E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa83(anonymousType)", "Naukaa83(anonymousType)\Naukaa83(anonymousType).csproj", "{E8D7AA98-EB6E-4D5E-AFFF-50103AFB18A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -520,6 +526,18 @@ Global
 		{F91B05F0-0C74-448E-A0F4-D250BC824F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F91B05F0-0C74-448E-A0F4-D250BC824F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F91B05F0-0C74-448E-A0F4-D250BC824F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46777CB9-8D28-4500-BCF7-04371062FBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46777CB9-8D28-4500-BCF7-04371062FBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46777CB9-8D28-4500-BCF7-04371062FBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46777CB9-8D28-4500-BCF7-04371062FBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2803BE58-7179-4E5B-98F9-AA2E7D5D56E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2803BE58-7179-4E5B-98F9-AA2E7D5D56E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2803BE58-7179-4E5B-98F9-AA2E7D5D56E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2803BE58-7179-4E5B-98F9-AA2E7D5D56E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8D7AA98-EB6E-4D5E-AFFF-50103AFB18A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D7AA98-EB6E-4D5E-AFFF-50103AFB18A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D7AA98-EB6E-4D5E-AFFF-50103AFB18A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D7AA98-EB6E-4D5E-AFFF-50103AFB18A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
