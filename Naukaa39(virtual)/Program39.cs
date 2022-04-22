@@ -13,6 +13,7 @@ namespace Naukaa39_virtual_
             chef1.SpecialDish();
             chef2.SpecialDish();
             chef2.CasualDish();
+            chef1.CasualDish();
 
         }
     }

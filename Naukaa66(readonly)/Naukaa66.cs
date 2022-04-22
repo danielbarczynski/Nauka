@@ -2,7 +2,7 @@
 {
     private readonly int Age; // nie wymaga podania wartosci
     private const string? UserName = "k"; // wymaga
-
+    Age = 30; // nie istnieje, mozna tylko zainicjalizowac w konstruktorze
     public User()
     {
         Age = 10;
