@@ -1,4 +1,6 @@
-﻿class Test
+﻿using System.Text;
+
+class Test
 {
     public int n;
     public int i { get; set; }
@@ -33,6 +35,7 @@ public class Program
    
     static void Main(string[] args)
     {
+
         var title = "Programowanie w C#";
         title.Display();//Programowanie w C#
         Program program = new Program();

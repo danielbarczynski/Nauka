@@ -14,6 +14,7 @@ namespace Nauka10
 
             Interchange(ref a, ref b);
             Console.WriteLine("After: a = {0}, b = {1}", a, b);
+            Console.ReadLine();
         }
 
         static void Interchange(ref int x, ref int y)
@@ -27,5 +28,6 @@ namespace Nauka10
         {
             Console.WriteLine("hi " + name + age);
         }
+        
     }
 }

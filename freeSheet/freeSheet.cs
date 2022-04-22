@@ -1,5 +1,6 @@
 ﻿using freeSheet.things;
 using System;
+using System.Text;
 using static FreeSheet2.FreeSheet2;
 
 namespace FreeSheet // ADDED FREESHEET2 REFERENCE
@@ -11,6 +12,16 @@ namespace FreeSheet // ADDED FREESHEET2 REFERENCE
         {
             FreeSheet freeSheet = new FreeSheet();
             freeSheet.test();
+
+            string graphemeU = "👍🏼";
+            byte[] bytes = Encoding.Default.GetBytes(graphemeU);
+            graphemeU = Encoding.UTF8.GetString(bytes);
+
+            string grapheme = "👍🏼";
+            Console.WriteLine(grapheme);
+            Console.WriteLine(grapheme.Length);
+            Console.WriteLine(graphemeU, Console.OutputEncoding = System.Text.Encoding.UTF8);
+            Console.WriteLine(graphemeU.Length);
         }
 
         public void test()
@@ -22,5 +33,6 @@ namespace FreeSheet // ADDED FREESHEET2 REFERENCE
             Console.WriteLine(freeSheet.Name);
             Console.WriteLine(base.Name = "big");
         }
+
     }
 }

@@ -30,7 +30,7 @@ namespace SerializeToFile
             // deserialization
             // 
             weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString2)!;
-
+            Console.WriteLine();
             Console.WriteLine($"Date: {weatherForecast.Date}");
             Console.WriteLine($"TemperatureCelsius: {weatherForecast.TemperatureCelsius}");
             Console.WriteLine($"Summary: {weatherForecast.Summary}");
