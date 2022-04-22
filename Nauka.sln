@@ -182,17 +182,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa81(IDisposable)", "Na
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa82(record)", "Naukaa82(record)\Naukaa82(record).csproj", "{2803BE58-7179-4E5B-98F9-AA2E7D5D56E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa83(anonymousType)", "Naukaa83(anonymousType)\Naukaa83(anonymousType).csproj", "{E8D7AA98-EB6E-4D5E-AFFF-50103AFB18A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa83(anonymousType)", "Naukaa83(anonymousType)\Naukaa83(anonymousType).csproj", "{E8D7AA98-EB6E-4D5E-AFFF-50103AFB18A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa84(init)", "Naukaa84(init)\Naukaa84(init).csproj", "{24CFF4D7-1ACB-4A87-B9BC-40753510685A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa84(init)", "Naukaa84(init)\Naukaa84(init).csproj", "{24CFF4D7-1ACB-4A87-B9BC-40753510685A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa85(nullable)", "Naukaa85(nullable)\Naukaa85(nullable).csproj", "{F8FC5378-0DBC-4AE6-B049-43B992928F8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa85(nullable)", "Naukaa85(nullable)\Naukaa85(nullable).csproj", "{F8FC5378-0DBC-4AE6-B049-43B992928F8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa86(thread)", "Naukaa86(thread)\Naukaa86(thread).csproj", "{083CF813-CCCB-4249-B1FC-74C521C15C8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa86(thread)", "Naukaa86(thread)\Naukaa86(thread).csproj", "{083CF813-CCCB-4249-B1FC-74C521C15C8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa87(interfaceImpExp)", "Naukaa87(interfaceImpExp)\Naukaa87(interfaceImpExp).csproj", "{AEC94B53-4297-4973-B5A4-8630BC985831}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa87(interfaceImpExp)", "Naukaa87(interfaceImpExp)\Naukaa87(interfaceImpExp).csproj", "{AEC94B53-4297-4973-B5A4-8630BC985831}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa88(struct)", "Naukaa88(struct)\Naukaa88(struct).csproj", "{194ED997-9009-4017-9324-E8FA8D2CCCCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa88(struct)", "Naukaa88(struct)\Naukaa88(struct).csproj", "{194ED997-9009-4017-9324-E8FA8D2CCCCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa89(dictionary)", "Naukaa89(dictionary)\Naukaa89(dictionary).csproj", "{96FC5EFC-1C5B-4B2F-B1A2-0D3F9E14B786}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -568,6 +570,10 @@ Global
 		{194ED997-9009-4017-9324-E8FA8D2CCCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{194ED997-9009-4017-9324-E8FA8D2CCCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{194ED997-9009-4017-9324-E8FA8D2CCCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96FC5EFC-1C5B-4B2F-B1A2-0D3F9E14B786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96FC5EFC-1C5B-4B2F-B1A2-0D3F9E14B786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96FC5EFC-1C5B-4B2F-B1A2-0D3F9E14B786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96FC5EFC-1C5B-4B2F-B1A2-0D3F9E14B786}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
