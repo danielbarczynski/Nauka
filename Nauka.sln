@@ -126,7 +126,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa57(abstract2)", "Nauk
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa58(outRef)", "Naukaa58(outRef)\Naukaa58(outRef).csproj", "{35D57506-C0AB-45BB-8D7C-902E4058A905}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa59(anonymousLambda)", "Naukaa59(anonymous)\Naukaa59(anonymousLambda).csproj", "{34131DB5-0467-4DA0-AD75-A639877BFD77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa59(anonymous)", "Naukaa59(anonymous)\Naukaa59(anonymous).csproj", "{34131DB5-0467-4DA0-AD75-A639877BFD77}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa60(stan)", "Naukaa60(stan)\Naukaa60(stan).csproj", "{505DD6A1-07D9-4656-8F95-FCC829B3FB50}"
 EndProject
@@ -194,7 +194,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa87(interfaceImpExp)",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa88(struct)", "Naukaa88(struct)\Naukaa88(struct).csproj", "{194ED997-9009-4017-9324-E8FA8D2CCCCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa89(dictionary)", "Naukaa89(dictionary)\Naukaa89(dictionary).csproj", "{96FC5EFC-1C5B-4B2F-B1A2-0D3F9E14B786}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa89(dictionary)", "Naukaa89(dictionary)\Naukaa89(dictionary).csproj", "{96FC5EFC-1C5B-4B2F-B1A2-0D3F9E14B786}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
