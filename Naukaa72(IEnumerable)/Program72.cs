@@ -3,9 +3,9 @@
     public static void Main()
     {
         IEnumerable<string> enumerable = new string[] { "A", "B", "C" };
- 
+        // or IEnumerable<TopicModel> 
         // Z użyciem foreach dostępnego w IEnumerable:
-        foreach (string s in enumerable)
+        foreach (string s in enumerable) // or var item... in Enumerable!!!
             Console.WriteLine(s);
  
         // Z użyciem Enumeratora:
