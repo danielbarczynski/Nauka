@@ -24,7 +24,7 @@ void Assign2(MyStruct myStruct)
 }
 
 Assign(class1);
-Assign2(struct1);
+Assign2(structrt1);
 
 Console.WriteLine();
 

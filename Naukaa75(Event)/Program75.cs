@@ -10,7 +10,7 @@ namespace SampleApp
 
         public EventProgram() // konstruktor bez parametru
         {
-            this.MyEvent += new MyDel(this.WelcomeUser);
+            MyEvent = new MyDel(WelcomeUser);
         }
      
 
@@ -21,11 +21,8 @@ namespace SampleApp
 
         static void Main(string[] args)
         {
-            Console.ReadLine();
             EventProgram obj1 = new EventProgram();
-            string result = obj1.MyEvent("Tutorials Point"); // argument wziety od funkcji
-            Console.WriteLine(result);
+            Console.WriteLine(obj1.MyEvent("Tutorials Point"));
         }
-
     }
 }

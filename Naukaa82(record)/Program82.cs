@@ -30,7 +30,7 @@ class Program82
 
         var person3 = new Person2() { Name = "Bob", Surname = "Rose" };
         var person4 = new Person2() { Name = "Bob", Surname = "Rose" };
-        var person6 = person4 with { Name = "Gary" };
+        var person6 = person4 with { Name = "Gary" }; // moze tez byc == person4; rowniez dziala przy recordzie
         Console.WriteLine(person3); // drukuje record jako string
         Console.WriteLine(person3 == person4); // porownanie properties (true)
         Console.WriteLine(person6);

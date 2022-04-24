@@ -15,6 +15,8 @@
 
             //-------------------------------------------------------------------------
 
+            // PREDICATE
+
             List<Employe> list2 = new List<Employe>();
             list2.Add(new Employe()
             {
