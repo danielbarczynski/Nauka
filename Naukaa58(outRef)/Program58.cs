@@ -20,6 +20,16 @@ namespace Naukaa58_outRef_
 
             Outt(out outside);// mozna podac jakas zmienna z zewnatrz, ale nie mozna podac wartosci (przekazanie referencji)
             // zmienna za to w ogóle nie zostanie uwzględniona, czyli takie bezpieczne odpalenie funckji z konstuktorem
+
+            var student = new Student
+            {
+                Name = "Susan",
+                Enrolled = false
+            };
+
+            Enroll(student);
+
+
         }
         public static void Nothing(int inside) // int outside wazny i liczony
         {
@@ -42,5 +52,20 @@ namespace Naukaa58_outRef_
             inside = inside + 10;
             Console.WriteLine(inside);
         }
+
+        static void Enroll(in Student student)
+        {
+            // With in assigning a new object would throw an error
+            // student = new Student();
+
+            // We can still do this with reference types though
+            student.Enrolled = true; // extension mthod
+        }
+    }
+
+    public class Student
+    {
+        public string Name { get; set; }
+        public bool Enrolled { get; set; }
     }
 }
