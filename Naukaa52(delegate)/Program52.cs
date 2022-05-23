@@ -20,14 +20,23 @@ namespace Naukaa52_delegate_
 
             //-----------------------------------------------------------------
 
-            Delegate Delegate, Delegate2, Delegate3, Delegate4; 
+            Delegate Delegate, Delegate2, Delegate3, Delegate4;
 
+            Delegate del = new Delegate(Hello);
             Delegate = new Delegate(Hello); // delegacja zawsze bierze w nawiasy nazwe funckji, zamiast typ i nazwe zmiennej
             Delegate2 = new Delegate(HowAreYou);
             Delegate3 = new Delegate(Goodbye);
 
             Delegate4 = Delegate + Delegate2 + Delegate3;
             Delegate4("Daniel");
+            del("yo");
+
+            del = delegate (string x) // type void as delegate
+            {
+                Console.WriteLine($"Anonymous function {x}");
+            };
+
+            del("confirmed");
 
         }
 

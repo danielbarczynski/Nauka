@@ -3,7 +3,7 @@
 class SampleCollection<T>
 {
     // Declare an array to store the data elements.
-    private T[] arr = new T[100];
+    private T[] arr = new T[100]; // T instead of int, string etc.
 
     // Define the indexer to allow client code to use [] notation.
     //public T this[int i]

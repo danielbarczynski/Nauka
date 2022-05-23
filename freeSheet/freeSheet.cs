@@ -32,6 +32,8 @@ namespace FreeSheet // ADDED FREESHEET2 REFERENCE
             freeSheet.Name = "nope"; // odwolanie sie do naszej klasy (base) ktora dziedziczy i z niej wziecie property
             Console.WriteLine(freeSheet.Name);
             Console.WriteLine(base.Name = "big");
+
+
         }
 
     }
