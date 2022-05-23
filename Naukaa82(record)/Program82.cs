@@ -34,5 +34,7 @@ class Program82
         Console.WriteLine(person3); // drukuje record jako string
         Console.WriteLine(person3 == person4); // porownanie properties (true)
         Console.WriteLine(person6);
+        person3.Name = "h";
+        Console.WriteLine(person3);
     }
 }
