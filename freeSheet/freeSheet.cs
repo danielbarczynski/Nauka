@@ -18,6 +18,11 @@ namespace FreeSheet // ADDED FREESHEET2 REFERENCE
             graphemeU = Encoding.UTF8.GetString(bytes);
 
             string grapheme = "👍🏼";
+            static void hello()
+            {
+                Horse horse = new Horse();
+                Console.WriteLine();
+            }
             Console.WriteLine(grapheme);
             Console.WriteLine(grapheme.Length);
             Console.WriteLine(graphemeU, Console.OutputEncoding = System.Text.Encoding.UTF8);
@@ -32,6 +37,10 @@ namespace FreeSheet // ADDED FREESHEET2 REFERENCE
             freeSheet.Name = "nope"; // odwolanie sie do naszej klasy (base) ktora dziedziczy i z niej wziecie property
             Console.WriteLine(freeSheet.Name);
             Console.WriteLine(base.Name = "big");
+            int x = 0;
+            while (x > 6)
+                Console.WriteLine("x");
+            x++
         }
 
     }
