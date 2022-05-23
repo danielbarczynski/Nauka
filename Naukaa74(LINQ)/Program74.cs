@@ -13,11 +13,12 @@
             where num % 2 == 0
             select num;
 
-        IEnumerable<int> numQuery4 = // to samo, tyle ze jasne typ zamiast var, ktory jest tym samym
+        IEnumerable<int> numQuery4 = // to samo, tyle ze jasny typ zamiast var, ktory jest tym samym
             from num in numbers select num;
 
         var numQuery2 = numbers.Where(num => num % 2 == 0); // notacja z lambdą
-        var numQuery3 = numbers.Select(num => num).Where(num => num % 2 == 0);
+        var numQuery3 = numbers.Select(num => num).Where(num => num % 2 == 0); // to samo
+
         // 3. Query execution.
         foreach (int num in numQuery)
         {

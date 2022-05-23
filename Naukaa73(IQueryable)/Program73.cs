@@ -4,7 +4,7 @@ AdventureWorks2012_DataEntities db = new AdventureWorks2012_DataEntities();
 
 // Tworzymy nowy obiekt pobierając wskazane dane
 
-IEnumerable<Employee> employeeIEnumberable = db.Employee.Where(a =>; a.JobTitle.StartsWith("P"));
+IEnumerable<Employee> employeeIEnumberable = db.Employee.Where(a => a.JobTitle.StartsWith("P"));
 employeeIEnumberable = employeeIEnumberable.Take<Employee>(5);
 
 // Tworzymy nowy obiekt pobierając wskazane dane
@@ -20,14 +20,14 @@ employeeIQueryable = employeeIQueryable.Take<Employee>(5);
 
 //Zapytanie takie w języku SQL wygląda w poniższy sposób:
 
-select* from HumanResources.Employee where JobTitle like 'P%';
+select * from HumanResources.Employee where JobTitle like 'P%';
 
 //Dopiero w następnym kroku zostaną zwrócone wymagane rekordy. W przypadku założonej przez nas liczby rzędu kilkuset tysięcy rekodów będzie to bardzo
 //niewydajne zapytanie.
 
 //Z kolei w przypadku interfejsu IQueryable proces ten został zoptymalizowany. Zapytanie wygląda w następujący sposób:
 
-select top(5) *from HumanResources.Employee where JobTitle like 'P%';
+select top(5) * from HumanResources.Employee where JobTitle like 'P%';
 
 //Z bazy danych zostaną odczytanie te wartości, których tak naprawdę potrzebujemy. Pokazuje to jak łatwo napisać kod, który w znaczący sposób wpłynie
 //na spadek wydajności naszej aplikacji.

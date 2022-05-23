@@ -2,10 +2,13 @@
 {
     public static void Main()
     {
-        IEnumerable<string> enumerable = new string[] { "A", "B", "C" };
+        IEnumerable<string> enumerable = new string[] { "A", "B", "C" }; // na liscie tez by dzialalo, bo implementuje ienumerable
+     List<string> list = new List<string> { "A", "B", "C" };
+
+        int[] arr = { 1, 2, 3 };
         // or IEnumerable<TopicModel> 
         // Z użyciem foreach dostępnego w IEnumerable:
-        foreach (string s in enumerable) // or var item... in Enumerable!!!
+        foreach (var s in arr) // or var item... in Enumerable!!!
             Console.WriteLine(s);
  
         // Z użyciem Enumeratora:

@@ -33,7 +33,7 @@ class GFG
 
         Console.WriteLine(myfun("h"));
 
-        //Console.WriteLine(method("h"));
+        Console.WriteLine(method("h"));
 
         Func<int, bool> boolFunc = IsTrue;
         Console.WriteLine(boolFunc(0));
