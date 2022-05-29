@@ -12,6 +12,9 @@ namespace Naukaa51_base_
             Console.WriteLine("---------------");
 
             Sub subb = new Sub("adam"); // drukuje sie rowniez base bez arg, dopiero po dodaniu base drukuje sie base z argumentem
+
+            Console.WriteLine("---------------");
+
             Sub subbb = new Sub(18);
         }
 
