@@ -204,7 +204,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa92(overloadingOperato
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa91(extensionMethod)", "Naukaa91\Naukaa91(extensionMethod).csproj", "{BAFA8C81-402C-4265-BD50-386062E89DE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa95(equalsSealed)", "Naukaa95(equals)\Naukaa95(equalsSealed).csproj", "{E4BE5E0E-E1AE-4CDF-9669-9D2FD4251E99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa95(equalsSealed)", "Naukaa95(equals)\Naukaa95(equalsSealed).csproj", "{E4BE5E0E-E1AE-4CDF-9669-9D2FD4251E99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa96(params)", "Naukaa96(params)\Naukaa96(params).csproj", "{A26673C5-09C8-41BB-B10F-155A47BE8BB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -604,6 +606,10 @@ Global
 		{E4BE5E0E-E1AE-4CDF-9669-9D2FD4251E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4BE5E0E-E1AE-4CDF-9669-9D2FD4251E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4BE5E0E-E1AE-4CDF-9669-9D2FD4251E99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A26673C5-09C8-41BB-B10F-155A47BE8BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A26673C5-09C8-41BB-B10F-155A47BE8BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A26673C5-09C8-41BB-B10F-155A47BE8BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A26673C5-09C8-41BB-B10F-155A47BE8BB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
