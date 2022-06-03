@@ -17,9 +17,20 @@ namespace Naukaa53_delegate2_
 
             //Employee.PromoteEmployee(list);
 
-            IsPromotable isPromotable = new IsPromotable(Promote); // dziala dopiero po uzupelnieniu delegacji(#1), poniewaz Promote bierze arugemnt emp
-            Employee.PromoteEmployee(list, isPromotable); // lub z lambdą (list, emp => emp.Experience >= 5) nie trzeba wtedy metody Promote
+            //IsPromotable isPromotable = new IsPromotable(Promote); // dziala dopiero po uzupelnieniu delegacji(#1), poniewaz Promote bierze arugemnt emp
+            Employee.PromoteEmployee(list); // lub z lambdą (list, emp => emp.Experience >= 5) nie trzeba wtedy metody Promote
         }
+
+       
+    }
+
+
+    class Employee
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+        public int Experience { get; set; }
 
         public static bool Promote(Employee emp) // zawarte w delegacji
         {
@@ -36,19 +47,10 @@ namespace Naukaa53_delegate2_
                 return false;
             }
         }
-    }
-
-
-    class Employee
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Salary { get; set; }
-        public int Experience { get; set; }
-
-
-        public static void PromoteEmployee(List<Employee> list, IsPromotable isPromotable) // delegacja z metodą bool, przekazana do nowej metody
+        public static void PromoteEmployee(List<Employee> list) // delegacja z metodą bool, przekazana do nowej metody
         {
+            Console.WriteLine(Hey()); // mozna skorzystac z innej metody w metodzie
+            IsPromotable isPromotable = new IsPromotable(Promote); // metoda promote przesunieta by miec do niej dostep
             foreach (Employee emp in list) // uzycie list
             {
                 if (isPromotable(emp)) // uzycie isPromotable, juz bez hardkodowania
@@ -56,6 +58,11 @@ namespace Naukaa53_delegate2_
                     Console.WriteLine($"Employee promoted {emp.Name}");
                 }
             }
+        }
+
+        public static string Hey()
+        {
+            return "hey";
         }
 
         //public static void PromoteEmployee(List<Employee> list)

@@ -11,6 +11,17 @@ namespace Naukaa27
         public abstract double returnDouble();
         public abstract void returnString();
         public abstract void returnString2<T>(T value);
+        public static string Yo() // moze tez zawierac nieabstrakcyjne pola
+        {
+            return "yo";
+        }
+
+        public int z = 5;
+
+        public Ball(params object[] list) // it can contain constructor
+        {
+            Console.WriteLine("wow");
+        }
     }
     public class SuperBall : Ball // jeśli tutaj również nie chcemy implementacji metody, możemy oznaczyć również klasę jako abstract, tylko wtedy juz jej nie utworzymy
     {

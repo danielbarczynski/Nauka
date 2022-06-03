@@ -11,14 +11,25 @@ namespace ExtensionMethod2
         }
     }
 
+    class B
+    {
+        public static int g = 5;
+        public  int h { get; set; }
+        B(int h)
+        {
+            this.h = h; // static wyrzuca blad
+        }
+    }
+
     class Program91
     {
         static void Main(string[] args)
         {
             string str = "123456";
-            int num = str.IntegerExtension(); 
+            int num = str.IntegerExtension();
             Console.WriteLine("The output using extension method: {0}", num);
             Console.ReadLine();
+            Console.WriteLine(B.g);
         }
     }
 }
