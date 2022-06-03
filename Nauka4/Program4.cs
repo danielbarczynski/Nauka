@@ -62,6 +62,17 @@ namespace Nauka4
                 Console.WriteLine(b3[i]);
 
             }
+
+            int[,] zzz = { { 1, 2 }, { 3, 4 } };
+            for (int i = 0; i < zzz.GetLength(0); i++) // for height, always starting from 0 (0)
+            {
+                for (int j = 0; j < zzz.GetLength(1); j++) // for width
+                    Console.Write(zzz[i, j]); // get element from the [i,j] - width and lenght
+                Console.WriteLine(); // print whole row [i,j] then jump to another line
+
+                // if "writeline" every element in other line, I want whole row
+            }
+
         }
     }
 }
