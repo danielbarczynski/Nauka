@@ -4,7 +4,7 @@ namespace DelegateAppl
 {
     class TestDelegate
     {
-        var test = "test";
+        //var test = "test"; // var tylko w mejnie
         static int num = 10;
 
         public static void AddNum(int p)

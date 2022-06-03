@@ -23,6 +23,14 @@ namespace OperatorOverloadExample
 
             }
 
+            public static Rectangle operator -(Rectangle rect1, Rectangle rect2)
+            {
+                Rectangle rectResult = new Rectangle(rect1.Width - rect2.Width, rect1.Height - rect2.Height);
+
+                return rectResult;
+
+            }
+
         }
 
         static void Main(string[] args)
@@ -32,9 +40,11 @@ namespace OperatorOverloadExample
 
             Rectangle rectResult = rect1 + rect2;
             Rectangle rectResult2 = new Rectangle(rect1.Width + rect2.Width, rect1.Height + rect2.Height);
-            rectResult2 = rect1 + rect2; // works because operator ich changed to method for example "publc Rectangle Add(r1,r2) - it wont work
+            rectResult2 = rect1 + rect2; // works because operator is changed to method for example "publc Rectangle Add(r1,r2) - it wont work
+            Rectangle rectResult3 = rect1 - rect2;
             Console.WriteLine($"{rectResult.Width},{rectResult.Height}");
             Console.WriteLine($"{rectResult2.Width},{rectResult2.Height}");
+            Console.WriteLine($"{rectResult3.Width},{rectResult3.Height}");
 
             Console.ReadKey();
         }
