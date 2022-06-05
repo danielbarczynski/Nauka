@@ -2,7 +2,7 @@
 char w = 'j';
 string z = "om";
 
-void ParamMethod(params object[] things ) // params must be the last and marked as one dimensional array
+void ParamMethod(params dynamic[] things ) // params must be the last and marked as one dimensional array, can be dynamic, object but not var
 {
     foreach (var item in things)
     {

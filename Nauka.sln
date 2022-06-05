@@ -206,7 +206,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa91(extensionMethod)",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa95(equalsSealed)", "Naukaa95(equals)\Naukaa95(equalsSealed).csproj", "{E4BE5E0E-E1AE-4CDF-9669-9D2FD4251E99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa96(params)", "Naukaa96(params)\Naukaa96(params).csproj", "{A26673C5-09C8-41BB-B10F-155A47BE8BB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa96(params)", "Naukaa96(params)\Naukaa96(params).csproj", "{A26673C5-09C8-41BB-B10F-155A47BE8BB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
