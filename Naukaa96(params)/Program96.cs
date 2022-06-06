@@ -2,6 +2,11 @@
 char w = 'j';
 string z = "om";
 
+double zz = 6.0 / 2.34;
+float f = 6.0f / 2.34f;
+Console.WriteLine(zz);
+Console.WriteLine(f);
+
 void ParamMethod(params dynamic[] things ) // params must be the last and marked as one dimensional array, can be dynamic, object but not var
 {
     foreach (var item in things)
