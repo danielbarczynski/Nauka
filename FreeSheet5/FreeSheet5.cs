@@ -16,7 +16,7 @@ try
   
     Console.WriteLine(num1 / num2);
 }
-catch (Exception e)
+catch (Exception)
 {
     num2 = 1;
     Console.WriteLine(num1 / num2);

@@ -210,7 +210,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa96(params)", "Naukaa9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa97(xUnit)", "Naukaa97(xUnit)\Naukaa97(xUnit).csproj", "{797C9BB7-446A-4397-B416-0D422DF077CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSheet5", "FreeSheet5\FreeSheet5.csproj", "{90FF55DC-AC32-4241-B0DD-B88A804CE32C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSheet5", "FreeSheet5\FreeSheet5.csproj", "{90FF55DC-AC32-4241-B0DD-B88A804CE32C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaa98(dependencyInjection)", "Naukaa98(dependencyInjection)\Naukaa98(dependencyInjection).csproj", "{44C8E904-9D54-4831-BA7B-4F3B0D61ABC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -622,6 +624,10 @@ Global
 		{90FF55DC-AC32-4241-B0DD-B88A804CE32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90FF55DC-AC32-4241-B0DD-B88A804CE32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90FF55DC-AC32-4241-B0DD-B88A804CE32C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C8E904-9D54-4831-BA7B-4F3B0D61ABC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C8E904-9D54-4831-BA7B-4F3B0D61ABC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C8E904-9D54-4831-BA7B-4F3B0D61ABC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C8E904-9D54-4831-BA7B-4F3B0D61ABC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
