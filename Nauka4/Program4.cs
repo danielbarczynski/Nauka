@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 namespace Nauka4
 {
     class Program4

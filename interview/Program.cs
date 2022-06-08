@@ -24,7 +24,9 @@ List<Person> people = new List<Person>
 
 };
 
-foreach (var item in SortowanieListy(people))
+var posortowanaLista = SortowanieListy(people);
+
+foreach (var item in posortowanaLista)
 {
     Console.WriteLine(item.Name + item.Age);
 }

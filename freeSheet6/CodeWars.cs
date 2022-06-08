@@ -1,22 +1,7 @@
-﻿Console.WriteLine(CustomMath.multiply(2, 3));
-string a = "QWERTyUIOP";
-string b = "QWERTUIOP";
-string c = "1";
-string d = "HELLO DONALD";
+﻿// Is this string uppercase?
 
-Console.WriteLine(a.IsUpperCase());
-Console.WriteLine(b.IsUpperCase());
-Console.WriteLine(c.IsUpperCase());
-Console.WriteLine(d.IsUpperCase());
-
-
-public class CustomMath
-{
-    public static int multiply(int a, int b)
-    {
-        return a * b;
-    }
-}
+string test1 = "HEY DONALD";
+Console.WriteLine(test1.IsUpperCase());
 
 public static class StringExtensions
 {
@@ -32,4 +17,10 @@ public static class StringExtensions
         return true;
     }
 
+    public static bool IsUpperCase2(this string text)
+    {
+        return text == text.ToUpper();
+    }
+
 }
+
