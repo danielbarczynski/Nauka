@@ -1,10 +1,12 @@
-﻿
-B b = new B(); // B is constructed here instead
+﻿B b = new B(); // B is constructed here instead
 A a = new A(b);
+b.z = 10;
 a.DoSomeStuff();
-b.Hop();
 
+
+D d = new D();
 C c = new C();
+d.x = 1000;
 c.DoSomeThings();
 
 public class A 
@@ -18,8 +20,8 @@ public class A
 
     public void DoSomeStuff()
     {
-        var c = b.z = 15;
-        Console.WriteLine(c);
+        //var c = b.z = 15;
+        Console.WriteLine(b.z);
     }
 }
 
@@ -43,8 +45,8 @@ public class C
 
     public void DoSomeThings()
     {
-        var xx = d.x = 2000;
-        Console.WriteLine(xx);
+        //var xx = d.x = 2000;
+        Console.WriteLine(d.x);
     }
 }
 
