@@ -1,5 +1,4 @@
-﻿
-//Napisz metodę, która posortuje powyższą listę malejąco względem wieku i zwróci ją w formie dowolnej kolekcji. Sortowanie możesz zaimplementować w jaki tylko sposób chcesz.
+﻿//Napisz metodę, która posortuje powyższą listę malejąco względem wieku i zwróci ją w formie dowolnej kolekcji. Sortowanie możesz zaimplementować w jaki tylko sposób chcesz.
 
 //Definiujemy kolekcję
 List<Person> people = new List<Person>
@@ -24,18 +23,16 @@ List<Person> people = new List<Person>
 
 };
 
-var posortowanaLista = SortowanieListy(people);
+IOrderedEnumerable<Person> sortedList(List<Person> people)
+{
+    return people.OrderByDescending(x=>x.Age); 
+}
+
+var posortowanaLista = sortedList(people);
 
 foreach (var item in posortowanaLista)
 {
     Console.WriteLine(item.Name + item.Age);
-}
-
-List<Person> SortowanieListy(List<Person> people)
-{
-    var query1 = people.OrderByDescending(x => x.Age);
-    var query2 = query1.ToList();
-    return query2;
 }
 
 public class Person
