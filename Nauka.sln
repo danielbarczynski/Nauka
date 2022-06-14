@@ -218,9 +218,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "interview", "interview\inte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa99(concat)", "Naukaa99(concat)\Naukaa99(concat).csproj", "{E6AEC162-528C-4D0A-8978-807B509C320B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test7", "Test7\Test7.csproj", "{C5E34D1E-B8FA-413F-931F-2713943448B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test7", "Test7\Test7.csproj", "{C5E34D1E-B8FA-413F-931F-2713943448B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test8", "Test8\Test8.csproj", "{19D38FF2-0785-46BA-BF9C-8DD8091DF835}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test8", "Test8\Test8.csproj", "{19D38FF2-0785-46BA-BF9C-8DD8091DF835}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaaa100(refOut2)", "Naukaa100(refOut2)\Naukaaa100(refOut2).csproj", "{0FC43A8E-7C22-4772-AB0B-EE984139AFDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -652,6 +654,10 @@ Global
 		{19D38FF2-0785-46BA-BF9C-8DD8091DF835}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19D38FF2-0785-46BA-BF9C-8DD8091DF835}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19D38FF2-0785-46BA-BF9C-8DD8091DF835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FC43A8E-7C22-4772-AB0B-EE984139AFDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC43A8E-7C22-4772-AB0B-EE984139AFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC43A8E-7C22-4772-AB0B-EE984139AFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC43A8E-7C22-4772-AB0B-EE984139AFDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
