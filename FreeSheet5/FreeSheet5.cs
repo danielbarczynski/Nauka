@@ -2,6 +2,9 @@
 var tos = cos.TekstBezSpacji();
 Console.WriteLine(tos);
 
+float fnum = 20.0f;
+decimal dnum = 30.0m;
+
 List<string> list = new List<string>() { "milk", "egg", "cheese", "ham" };
 
 var q1 = list.Where(x => x == "egg");

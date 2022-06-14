@@ -21,6 +21,6 @@ class Naukaaa100
     public static void Zmien(ref Osoba o) // bez ref będzie Arek
     {
         o.imie = "Arek";         // zadziała, przy out wyjdzie błąd kompilacji
-        o = new Osoba("Maciek"); // także dzaiała!
+        o = new Osoba("Maciek"); // także dzaiała! gdyby zakomentowac, bedzie arek, ale jest ponowna inicjalizacja
     }
 }
