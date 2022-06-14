@@ -7,7 +7,7 @@ static class MyCLass
     public static string ReverseWordsInSentence(string s)
     {
         string result = "";
-        for (int i = s.Length; i <= 0; i--)
+        for (int i = s.Length - 1; i >= 0; i--)
         {
             result += s[i];
         }
