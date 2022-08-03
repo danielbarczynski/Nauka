@@ -2,6 +2,7 @@
 var tos = cos.TekstBezSpacji();
 Console.WriteLine(tos);
 
+
 float fnum = 20.0f;
 decimal dnum = 30.0m;
 
@@ -27,6 +28,7 @@ catch (Exception)
 
 static class MyClass
 {
+    public  int w { get; set; }
     public static string TekstBezSpacji(this string tekst)
     {
         string tekstNoSpaces = "";

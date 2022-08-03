@@ -73,17 +73,17 @@
 
         // z asp: (+ iqueryable)
 
-        [HttpGet]
-        public async Task<IActionresult> List(string name)
-        {
-            IQueryable<ProductEntity> productsQuery = _dbContext.Products;
-            if (!string.IsNullOrEmpty(name))
-            {
-                productsQuery = productsQuery.Where(x => x.Name.Contains(name));
-            }
-            var products = await productsQuery.ToListAsync(); // uproszczenie
-            return View(products);
-        }
+        //[HttpGet]
+        //public async Task<IActionresult> List(string name)
+        //{
+        //    IQueryable<ProductEntity> productsQuery = _dbContext.Products;
+        //    if (!string.IsNullOrEmpty(name))
+        //    {
+        //        productsQuery = productsQuery.Where(x => x.Name.Contains(name));
+        //    }
+        //    var products = await productsQuery.ToListAsync(); // uproszczenie
+        //    return View(products);
+        //}
 
     }
 }
