@@ -41,6 +41,37 @@ foreach (var item in evenAge2)
     Console.WriteLine(item.Age);
 }
 
+//--------------------------------------------
+
+List<int> numbers = new List<int>{5, 12, 34, 84, 15, 26, 7};
+
+// as anonymous type
+var nums = numbers.Select((x, y) => new {number = x, index = y});
+
+foreach (var item in nums)
+{
+    Console.WriteLine(item.index + ", " + item.number);
+}
+
+// ------------------------------------------
+
+IEnumerable<string> nameSelected = listOfPersons.Select(x => x.Name);
+
+foreach (var item in nameSelected)
+{
+    Console.WriteLine(item);
+}
+
+// ------------------------------------------
+
+string[] strArr = {"abcdefgh", "12345"};
+IEnumerable<char> strList = strArr.SelectMany(x => x); // if just Select then can't be char, and it just prints two strings 
+
+foreach (var item in strList)
+{
+    Console.WriteLine(item);
+}
+
 class Person
 {
     public string Name { get; set; }
