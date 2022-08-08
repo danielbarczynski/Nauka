@@ -67,6 +67,8 @@ foreach (var item in nameSelected)
 string[] strArr = {"abcdefgh", "12345"};
 IEnumerable<char> strList = strArr.SelectMany(x => x); // if just Select then can't be char, and it just prints two strings 
 
+IEnumerable<char> strList2 = from str in strArr from chr in str select chr;
+
 foreach (var item in strList)
 {
     Console.WriteLine(item);
