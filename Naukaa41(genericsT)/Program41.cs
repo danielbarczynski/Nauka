@@ -16,7 +16,7 @@ namespace Naukaa41_genericsT_
                 Console.WriteLine("not equal");
             }
 
-            bool Equall = Calculatorr<string>.AreEquall("C", "C");
+            bool Equall = Calculatorr<string>.AreEquall("C", "DD");
             if (Equall)
             {
                 Console.WriteLine("are equal");

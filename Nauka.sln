@@ -226,7 +226,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa29(adapter)", "Naukaa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaa31(this)", "Naukaa31(this)\Naukaa31(this).csproj", "{31C8CD6E-2766-47D7-8A23-F229C3C2508A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naukaaa102(linq2)", "Naukaaa102(linq2)\Naukaaa102(linq2).csproj", "{9B0D90DE-ABF2-4A7D-881D-C7AD246CB9FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaaa102(linq2)", "Naukaaa102(linq2)\Naukaaa102(linq2).csproj", "{9B0D90DE-ABF2-4A7D-881D-C7AD246CB9FB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaaa103(linq3)", "Naukaaa103(linq3)\Naukaaa103(linq3).csproj", "{354F587C-2B7B-4ED4-8024-7220B3AE5E6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -670,6 +672,10 @@ Global
 		{9B0D90DE-ABF2-4A7D-881D-C7AD246CB9FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B0D90DE-ABF2-4A7D-881D-C7AD246CB9FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B0D90DE-ABF2-4A7D-881D-C7AD246CB9FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{354F587C-2B7B-4ED4-8024-7220B3AE5E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354F587C-2B7B-4ED4-8024-7220B3AE5E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354F587C-2B7B-4ED4-8024-7220B3AE5E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354F587C-2B7B-4ED4-8024-7220B3AE5E6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
