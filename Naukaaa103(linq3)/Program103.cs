@@ -1,23 +1,33 @@
-﻿var employeeDepartments = Employee.employees
-                                    .GroupJoin(Department.departments, 
-                                    e => e.DepartmentId, 
+﻿var employeeDepartments  = Department.departments
+                                    .GroupJoin(Employee.employees, 
                                     d => d.Id,
-                                    (e, d) => new 
+                                    e => e.DepartmentId, 
+                                    (d, e) => new 
                                     { 
+                                        Department = d,
                                         Employee = e, 
-                                        Department = d
                                     });
 
-foreach (var item in employeeDepartments)
-{
-    Console.WriteLine(item.Employee.Name);
-    
-    foreach (var item2 in item.Department)
-    {
-        Console.WriteLine(item2.Name);
-    }
+var employeeDepartments2 = from d in Department.departments 
+                           join e in Employee.employees
+                           on d.Id equals e.DepartmentId into egroup
+                           select new 
+                           {
+                                Department = d,
+                                Employee = egroup,
+                           };
 
+
+foreach (var item in employeeDepartments2)
+{
+    Console.WriteLine(item.Department.Name);
+    
+    foreach (var item2 in item.Employee)
+    {
+        Console.WriteLine(" " + item2.Name);
+    }
 }
+
 
 public class Employee
 {
