@@ -28,14 +28,38 @@ PointR pointR2 = new PointR()
     X = 100, Y = 200
 };
 
-Console.WriteLine(pointC == pointC2); // compare references
+Console.WriteLine(pointC == pointC2); // compares references, false. make it stay that way, to be able to compare reference, override equals only
 // Console.WriteLine(pointS == pointS2); error
-Console.WriteLine(pointR == pointR2); // compare values
+Console.WriteLine(pointR == pointR2); // compares values, true
 
-public class PointC
+Console.WriteLine("-------------------");
+
+Console.WriteLine(pointC.Equals(pointC2)); // false, after overriding true
+Console.WriteLine(pointS.Equals(pointS2)); // true, compares values
+Console.WriteLine(pointR.Equals(pointR2)); // true, compares values
+
+public class PointC : IEquatable<PointC>
 {
     public int X { get; set; }
     public int Y { get; set; }
+
+    public bool Equals(PointC other)
+    {
+        return other != null && this.GetType() == other.GetType() && this.X == other.X && this.Y == other.Y; 
+        //&& this != null is useless cuz instance of first object must be always set  
+    }
+
+    public override bool Equals(object obj) // now exceptions works if objects are different types for example
+    {
+        // return base.Equals(obj);
+        return Equals(obj as PointC);
+    }
+
+    public override int GetHashCode()
+    {
+        // return base.GetHashCode();
+        return X ^ Y;
+    }
 }
 public struct PointS
 {
