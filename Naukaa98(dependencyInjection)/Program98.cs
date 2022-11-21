@@ -1,13 +1,13 @@
 ﻿B b = new B(); // B is constructed here instead
 A a = new A(b);
-b.z = 12;
-a.DoSomeStuff();
+b.z = 12; // changing z to 12
+a.DoSomeStuff(); // printing z 12 (dependency injection)
 
 
 D d = new D();
 C c = new C();
-d.x = 1000;
-c.DoSomeThings();
+d.x = 1000; // changing x to 1000
+c.DoSomeThings(); // printing x 5000
 
 public class A 
 {
