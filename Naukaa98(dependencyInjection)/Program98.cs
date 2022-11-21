@@ -1,6 +1,6 @@
 ﻿B b = new B(); // B is constructed here instead
 A a = new A(b);
-b.z = 10;
+b.z = 12;
 a.DoSomeStuff();
 
 
