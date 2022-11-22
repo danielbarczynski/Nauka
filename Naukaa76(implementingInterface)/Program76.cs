@@ -47,7 +47,7 @@ public class Employee : IDetails
         return "Joe";
     }
 }
-    class Program76
+class Program76
 {
     //This also allows you to then get into things like Inversion Of Control where you would take an item in like this and you could pass a dog,
     //cat or parrot and the method would always work, not knowing or caring which animal it was:
@@ -60,10 +60,19 @@ public class Employee : IDetails
     //and dynamic rather than rigid and tightly coupled.
     //In C# you can only inherit from one base class but you can have multiple interfaces. So, you could have:
 
-   // public class Dog : IAnimal, IMammal, ICarnivor
+    // public class Dog : IAnimal, IMammal, ICarnivor
 
     //This allows you to have small interfaces (recommended) that then allow you to build up so giving maximum control over what an item can / must do.
-
+    class EasyDependency
+    {
+        private IAnimal _animal;
+        // no need for private dog, cat, sprarrow. in constructor also
+        public EasyDependency(IAnimal animal)
+        {
+            _animal = animal;
+            Console.WriteLine(_animal.Speak());
+        }
+    }
     static void Main(string[] args)
     {
         // Writes Woof, Woof
@@ -77,6 +86,10 @@ public class Employee : IDetails
         // Now writes Sqwark etc
         animal = new Parrot();
         Console.WriteLine(animal.Speak());
+
+        Console.WriteLine("Easy dependency: ");
+        var dep = new EasyDependency(animal);
+        
 
         //---------------------------------------
 
