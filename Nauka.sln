@@ -238,6 +238,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaaa106(tuple)", "Naukaa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaaa105(getHashCode)", "Naukaaa105(getHashCode)\Naukaaa105(getHashCode).csproj", "{09E967E1-A2F4-4830-9A60-A4A8544AAE6B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Naukaaa108(decoupling)", "Naukaaa108(decoupling)\Naukaaa108(decoupling).csproj", "{C8604A9A-998F-4F63-AB20-9145A2BA4802}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -700,6 +702,10 @@ Global
 		{09E967E1-A2F4-4830-9A60-A4A8544AAE6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09E967E1-A2F4-4830-9A60-A4A8544AAE6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09E967E1-A2F4-4830-9A60-A4A8544AAE6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8604A9A-998F-4F63-AB20-9145A2BA4802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8604A9A-998F-4F63-AB20-9145A2BA4802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8604A9A-998F-4F63-AB20-9145A2BA4802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8604A9A-998F-4F63-AB20-9145A2BA4802}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
