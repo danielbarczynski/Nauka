@@ -1,18 +1,17 @@
-using SportsTeam;
+using SportsTeam2;
 using System;
 using Naukaaa108_decoupling_;
 //using static Naukaaa108_decoupling_.Test2; 
 //namespace Naukaaa108_decoupling_ // then no need to "using" 
-namespace MyNamespace
+namespace MyNamespace;
+
+class Test
 {
-    class Test
+    public void Doing()
     {
-        public void Doing()
-        {
-            Test2.Do();
-            Test2.DoingClass.Do();
-            // same as:
-            System.Console.WriteLine();
-        }
+        Test2.Do();
+        Test2.DoingClass.Do();
+        // same as:
+        System.Console.WriteLine();
     }
 }

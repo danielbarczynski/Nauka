@@ -1,9 +1,11 @@
-public class SportsTeam
+namespace SportsTeam2;
+
+public class SportsTeam2
 {
     public string Sport { get; set; }
     public string TeamName { get; set; }
 
-    public SportsTeam(string sport, string teamName)
+    public SportsTeam2(string sport, string teamName)
     {
         Sport = sport;
         TeamName = teamName;
