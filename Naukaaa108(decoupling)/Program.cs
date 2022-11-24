@@ -1,6 +1,8 @@
 ﻿using static System.Console;
+using Con = System.Console; // alias
 
-WriteLine("Hello, World!");
+Con.WriteLine("con");
+WriteLine("static");
 var sp = new SportsTeam("football", "Real Madrid");
 sp.PrintTeamInfo();
 
