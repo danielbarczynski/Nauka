@@ -1,3 +1,4 @@
+// This class is very basic; it’s just here to help explain how to implement decoupling. However, even a simple, barebones class like this would take significant effort to unit test.
 public class SportsTeam
 {
     public string Sport { get; set; }
