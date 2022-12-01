@@ -15,6 +15,7 @@
 
     public class Customer
     {
+        int privID;
         protected int ID { get; set; }
     }
 
@@ -22,11 +23,12 @@
     {
         public void GetID()
         {
-            //Customer customer = new Customer();
+            // Customer customer = new Customer();
             SuperCustomer scustomer = new SuperCustomer();
-
+            
             //customer.ID = 1; cannot access protected
             //examples that are working
+            // scustomer.privID = 5; // not working, private
             scustomer.ID = 2;
             this.ID = 5;
             base.ID = 7;
@@ -36,6 +38,5 @@
         
         
     }
-
 
 }
