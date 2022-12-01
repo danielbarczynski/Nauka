@@ -24,14 +24,16 @@ namespace Naukaa13_getSet_
             {
                 if (value <= 0)
                 {
-                    Console.WriteLine("fuck you");
+                    Console.WriteLine("you");
                 }
                 _iq = value;
             }
         }
 
         public string Surname { get => _surname; set => _surname = value; } // created by "encapsulate"
-
+        public string Adress { get => _adress; private set => _adress = value; }
+        public string Adress2 { get; set; } = "Górka";
         string _surname;
+        string _adress = "Krowodrza";
     }
 }

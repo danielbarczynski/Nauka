@@ -25,7 +25,7 @@ namespace Naukaa13_getSet_
 
             foreach (Student student in list)
             {
-                Console.WriteLine($"Dane studenta {++i} id: {student.Id + i} imie: {student.Name} wiek: {student.Age} iq: {student.Iq}"); //get
+                Console.WriteLine($"Dane studenta {++i} id: {student.Id + i} imie: {student.Name} wiek: {student.Age} iq: {student.Iq} adress: {student.Adress} {student.Adress2}"); //get
             }
         }
     } 

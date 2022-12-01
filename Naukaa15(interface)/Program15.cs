@@ -24,18 +24,19 @@ namespace Naukaa15
         {
             return "hey";
         }
-        public int j { get; set; } // can have property
-        public int z = 5; // cannot contain fields!!!
-        public IFigure() // cannot contain constructor
-        {
+        int j { get; set; } // can have property
+        // public int z = 5; // cannot contain fields!!!
+        // public IFigure() // cannot contain constructor
+        // {
 
-        }
+        // }
     }
 
     class Square : IFigure
     {
         public int Corners { get; set; }
         public double Len { get; set; }
+        public int j { get; set; }
 
         public double GetArea()
         {

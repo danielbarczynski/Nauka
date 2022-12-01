@@ -25,7 +25,7 @@ List<Person> people = new List<Person>
 
 IOrderedEnumerable<Person> sortedList(List<Person> people)
 {
-    return people.OrderByDescending(x=>x.Age); 
+    return people.OrderByDescending(x => x.Age);
 }
 
 var posortowanaLista = sortedList(people);
