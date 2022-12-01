@@ -31,12 +31,13 @@ namespace Naukaa53_delegate2_
 
         public static bool Promote(Employee emp) // zawarte w delegacji
         {
-            if (emp.Experience >= 5 && emp.Salary <= 4000)
-            {
-                return true;
-            }
+            return (emp.Experience >= 5 && emp.Salary <= 4000) ? false : true;
+            // if (emp.Experience >= 5 && emp.Salary <= 4000)
+            // {
+            //     return true;
+            // }
 
-            return false;
+            // return false;
             
         }
         public static void PromoteEmployee(List<Employee> list) // delegacja z metodą bool, przekazana do nowej metody
