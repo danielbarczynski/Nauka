@@ -4,7 +4,8 @@ namespace Naukaa52_delegate_
 {
     public delegate void Delegate(string message);
     public delegate void Delegatee(string text);
-
+    delegate string NewDel(string str);
+    
     internal class Program52
     {
         static void Main(string[] args)
@@ -21,7 +22,9 @@ namespace Naukaa52_delegate_
             //-----------------------------------------------------------------
 
             Delegate Delegate, Delegate2, Delegate3, Delegate4;
-
+            
+            NewDel newDel = new (NewDelFunc);
+            
             Delegate del = new Delegate(Hello);
             Delegate = new Delegate(Hello); // delegacja zawsze bierze w nawiasy nazwe funckji, zamiast typ i nazwe zmiennej
             Delegate2 = new Delegate(HowAreYou);
@@ -36,10 +39,22 @@ namespace Naukaa52_delegate_
                 Console.WriteLine($"Anonymous function {x}");
             };
 
+            Console.WriteLine(newDel("stringg"));
+            
+            newDel = delegate (string str)
+            {
+                return str + "as anonymous";
+            };
+            
+            Console.WriteLine(newDel("stringg"));
             del("confirmed");
 
         }
 
+        public static string NewDelFunc(string str) // must be static
+        {
+            return str;
+        }
         public static void Hello(string name)
         {
             Console.WriteLine($"Hello {name}");

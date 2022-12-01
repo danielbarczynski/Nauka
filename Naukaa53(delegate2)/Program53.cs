@@ -19,11 +19,8 @@ namespace Naukaa53_delegate2_
 
             //IsPromotable isPromotable = new IsPromotable(Promote); // dziala dopiero po uzupelnieniu delegacji(#1), poniewaz Promote bierze arugemnt emp
             Employee.PromoteEmployee(list); // lub z lambdą (list, emp => emp.Experience >= 5) nie trzeba wtedy metody Promote
-        }
-
-       
+        }   
     }
-
 
     class Employee
     {
@@ -34,18 +31,13 @@ namespace Naukaa53_delegate2_
 
         public static bool Promote(Employee emp) // zawarte w delegacji
         {
-            if (emp.Experience >= 5)
+            if (emp.Experience >= 5 && emp.Salary <= 4000)
             {
                 return true;
             }
-            if (emp.Salary <= 4000)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+
+            return false;
+            
         }
         public static void PromoteEmployee(List<Employee> list) // delegacja z metodą bool, przekazana do nowej metody
         {
@@ -53,6 +45,12 @@ namespace Naukaa53_delegate2_
             IsPromotable isPromotable = new IsPromotable(Promote); // metoda promote przesunieta by miec do niej dostep
             foreach (Employee emp in list) // uzycie list
             {
+                // without delegate 
+                // if (Promote(emp))
+                // {
+                //     Console.WriteLine($"Employee promoted {emp.Name}");
+                // }
+
                 if (isPromotable(emp)) // uzycie isPromotable, juz bez hardkodowania
                 {
                     Console.WriteLine($"Employee promoted {emp.Name}");
