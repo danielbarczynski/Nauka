@@ -14,7 +14,7 @@
 
             // or
             nc = (x) => Console.WriteLine(x);
-            
+
             nc(5);
 
             //-------------------------------------------------------------------------
@@ -40,12 +40,15 @@
                 new Employee() { Id = 2, Age = 30, Name = "Agata" },
                 new Employee() { Id = 3, Age = 40, Name = "Bartlomelo"}
             };
+
             Console.WriteLine("----------------");
+
             Employee employee =  // bez stwarzania metody delegacji, funkcja anonimowa
             list.Find(delegate (Employee e) // delegate = Predicate // Predicate<T> (T obj) -- definition // nie wskazujemy na żadną utworzona przez nas metode
             {
                 return e.Id == 2;
             });
+            
             Console.WriteLine($"{employee.Id} {employee.Name}");
 
             // LAMBDA =>
