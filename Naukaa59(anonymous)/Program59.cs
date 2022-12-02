@@ -12,6 +12,9 @@
                 Console.WriteLine("Anonymous Method: {0}", x);
             };
 
+            // or
+            nc = (x) => Console.WriteLine(x);
+            
             nc(5);
 
             //-------------------------------------------------------------------------

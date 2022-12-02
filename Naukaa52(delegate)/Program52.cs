@@ -5,6 +5,7 @@ namespace Naukaa52_delegate_
     public delegate void Delegate(string message);
     public delegate void Delegatee(string text);
     delegate string NewDel(string str);
+    delegate string OldDel(string str);
     
     internal class Program52
     {
@@ -41,12 +42,17 @@ namespace Naukaa52_delegate_
 
             Console.WriteLine(newDel("stringg"));
             
-            newDel = delegate (string str)
-            {
-                return str + "as anonymous";
-            };
+            // newDel = delegate (string str)
+            // {
+            //     return str + "as anonymous";
+            // };
+
+            // second way
+            newDel = (x) => x + "as anonymous";
+
+            NewDel newDel2 = (x) => x + "as anonymous";
             
-            Console.WriteLine(newDel("stringg"));
+            Console.WriteLine(newDel2("stringg "));
             del("confirmed");
 
         }

@@ -13,12 +13,12 @@ namespace Naukaa56_partial_
             Console.WriteLine($"Hello {_name} who is {_age} yo"); // can access private variables due to Partial Class
         }
 
-        //public partial void Test(); // gdyby coś zawierała, wyszedłby błąd
+        public partial void Test(); // gdyby coś zawierała, wyszedłby błąd
 
-        //partial void Test() // METODA PARTIAL MUSI MIEC DWIE CZESCI (w tym przypadku druga czesc w drugiej partial klasie)
-        //{
+        // public partial void Test() // METODA PARTIAL MUSI MIEC DWIE CZESCI (w tym przypadku druga czesc w drugiej partial klasie)
+        // {
         //    Console.WriteLine("testu");
-        //}
+        // }
 
         public void WykonanieTestu()
         {
