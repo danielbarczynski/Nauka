@@ -23,6 +23,7 @@ class StringDataStore : IEnumerable<StringDataStore>
 {
     public string Name { get; set; }
     StringDataStore[] strArr = new StringDataStore[10]; // internal data storage
+
     public IEnumerable<StringDataStore> ReturnStrings() // can be privare, and just use GetEnumerator
     {
         foreach (var item in strArr)
@@ -86,5 +87,3 @@ class Program70
         }
     }
 }
-// The example displays the following output:
-//       Hello, World.
