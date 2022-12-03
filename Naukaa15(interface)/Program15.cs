@@ -17,8 +17,9 @@ namespace Naukaa15
     interface IFigure // musi byc z duzej litery i "I", zeby rozeznac sie co jest class a co interface
     {
         int Corners { get; set; } // nie ma sensu by byly publiczne
+        abstract int Corners2 { get; set; } // moga byc abstrakcyjne
 
-        double GetArea();
+        double GetArea(); // static tylko jesli maja implementacje, inaczej to bez sensu
 
         static string Hello() // if there is implementation, no need for class to inherit this
         {

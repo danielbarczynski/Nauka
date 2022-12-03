@@ -24,6 +24,7 @@ namespace Naukaa39_virtual_
         {
             Console.WriteLine("chef making chicken");
         }
+        // public virtual void NoSense(); // must have a body
         public virtual void SpecialDish() // virtual można nadpisywac przez override tak jak abstract, w takich sytuacjach dziedziczenia przydatne
         {
             Console.WriteLine("chef making risotto");

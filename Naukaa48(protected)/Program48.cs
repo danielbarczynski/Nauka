@@ -6,7 +6,7 @@
         {
             Customer customer = new Customer();
             SuperCustomer superCustomer = new SuperCustomer();
-
+            
             //superCustomer.ID = 5; nie działa
             superCustomer.GetID();
             //Console.WriteLine(customer.ID); -- protected nie mozna ani edytowac (set), ani drukowac (get)
