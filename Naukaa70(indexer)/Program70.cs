@@ -22,8 +22,8 @@ class SampleCollection<T>
 class StringDataStore : IEnumerable<StringDataStore>
 {
     public string Name { get; set; }
-    private StringDataStore[] strArr = new StringDataStore[10]; // internal data storage
-    IEnumerable<StringDataStore> ReturnStrings()
+    StringDataStore[] strArr = new StringDataStore[10]; // internal data storage
+    public IEnumerable<StringDataStore> ReturnStrings() // can be privare, and just use GetEnumerator
     {
         foreach (var item in strArr)
         {
@@ -74,8 +74,13 @@ class Program70
 
         for (int i = 0; i <= 9; i++)
             stringDataStore[i] = new StringDataStore { Name = $"String {i}" };
-            
-        foreach (var item in stringDataStore)
+
+        // foreach (var item in stringDataStore.ReturnStrings()) // one way without GetEnumerator
+        // {
+        //     Console.WriteLine(item.Name);
+        // }
+
+        foreach (var item in stringDataStore) // second way with GetEnumerator which basically return method above
         {
             Console.WriteLine(item.Name);
         }
