@@ -6,6 +6,7 @@ namespace Naukaa57_abstract2_
     {
         static void Main(string[] args)
         {
+            FullTimeEmployee f = new FullTimeEmployee{};
             FullTimeEmployee fullTimeEmployee = new FullTimeEmployee()
             {
                 Name = "Marcin",
