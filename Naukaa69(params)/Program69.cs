@@ -39,7 +39,9 @@ namespace Tablice
 
             // -----------------------------------------------------------------------
             new Person { Name = "Nikt", Age = 00 };
+            new Person();
             new List<Person>{};
+            new List<Person>();
             // new int[] {}; // throws error, works only as parameter
 
             srednia = tb.PoliczSrednia(new int[] { 2, 5, 9 });
