@@ -17,6 +17,8 @@ namespace Tablice
             }
             return concatStr!;
         } 
+        static string ReturnPerson(Person person) => person.Name;
+        
         static void Main(string[] args)
         {
             TablicaJakoParametr tb = new TablicaJakoParametr();
@@ -32,12 +34,28 @@ namespace Tablice
             int suma = tp.DodajElementy(1, 2, 3, 4, 6);
             // int suma2 = tp.DodajElementy(liczby, liczby2); // can be only one array
             Console.WriteLine("Wynik dodawania to: {0}", suma);
-
             Console.WriteLine(MySuperStr("daniel", "mela", "iza"));
+
+
+            // -----------------------------------------------------------------------
+            new Person { Name = "Nikt", Age = 00 };
+            new List<Person>{};
+            // new int[] {}; // throws error, works only as parameter
+
+            srednia = tb.PoliczSrednia(new int[] { 2, 5, 9 });
+            Console.WriteLine(ReturnPerson(new Person { Name = "Gosc", Age = 0}));
+            Console.WriteLine(tb.PoliczSrednia2(new List<int> { 5, 6 }));
         }
+    }
+
+    class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
     }
     class TablicaJakoParametr
     {
+        public int PoliczSrednia2(List<int> list) => list.Last();
         public double PoliczSrednia(int[] liczby)
         {
             int i;
