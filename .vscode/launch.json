@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Naukaa68(yield)/bin/Debug/net6.0/Naukaa68(yield).dll",
+            "program": "${workspaceFolder}/Naukaa70(indexer)/bin/Debug/net6.0/Naukaa70(indexer).dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Naukaa68(yield)",
+            "cwd": "${workspaceFolder}/Naukaa70(indexer)",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false

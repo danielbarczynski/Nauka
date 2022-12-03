@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Naukaa68(yield)/Naukaa68(yield).csproj",
+                "${workspaceFolder}/Naukaa70(indexer)/Naukaa70(indexer).csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Naukaa68(yield)/Naukaa68(yield).csproj",
+                "${workspaceFolder}/Naukaa70(indexer)/Naukaa70(indexer).csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Naukaa68(yield)/Naukaa68(yield).csproj"
+                "${workspaceFolder}/Naukaa70(indexer)/Naukaa70(indexer).csproj"
             ],
             "problemMatcher": "$msCompile"
         }
