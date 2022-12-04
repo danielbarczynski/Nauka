@@ -2,17 +2,24 @@
 
 Console.WriteLine("Press A");
 var key = Console.ReadLine(); 
+if (key == "a")
+    KeyPressed();
 
 static void KeyPressed() 
 {
-    if (key == 'a')
-        MyClass.OnClick();
+    Button button = new();    
+    button.ClickEvent += (sender, e) =>
+    {
+        Console.WriteLine("Button clicked");
+    };
+    
+    button.OnClick();
 }
 
-public class MyClass
+public class Button
 {
     public event EventHandler ClickEvent;
-    public static void OnClick()
+    public void OnClick()
     {
         ClickEvent(this, EventArgs.Empty);
     }
