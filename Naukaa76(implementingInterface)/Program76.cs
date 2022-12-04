@@ -1,6 +1,7 @@
 ﻿public interface IAnimal
 {
     string Speak();
+    string SpeakMore() => "speaking more";
 }
 
 public class Dog : IAnimal
@@ -86,6 +87,7 @@ class Program76
         // Now writes Sqwark etc
         animal = new Parrot();
         Console.WriteLine(animal.Speak());
+        Console.WriteLine(animal.SpeakMore()); // all initialized classes have now it's interface method
 
         Console.WriteLine("Easy dependency: ");
         var dep = new EasyDependency(animal);
