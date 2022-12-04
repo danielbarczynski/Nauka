@@ -2,6 +2,8 @@
 namespace SampleApp
 {
     public delegate string MyDel(string str); // najpierw trzeba utworzyc delegate
+    public delegate string MyDel2(); 
+    public delegate string MyDel3(string str); 
 
     class EventProgram
     {
@@ -9,6 +11,8 @@ namespace SampleApp
         event MyDel MyEvent; // event od delegaty
         // event int b = 5; // event must be of type delgate
         MyDel myDel;
+        MyDel2 myDel2;
+        MyDel3 myDel3;
         public EventProgram() // konstruktor bez parametru
         {
             MyEvent = new(WelcomeUser);
@@ -29,6 +33,15 @@ namespace SampleApp
             EventProgram obj1 = new EventProgram();
             Console.WriteLine(obj1.MyEvent("with event"));
             Console.WriteLine(obj1.myDel("just del")); // the same, what's the point of event
+            var mydl = obj1.myDel2 = () => "ceo"; // conly works without argument (because only methods can be fitted in there)
+            Console.WriteLine(mydl());
+            //or 
+            Console.WriteLine(obj1.myDel2());
+            MyDel3 mydl2 = obj1.myDel3 = (string str) => str;
+            Console.WriteLine(mydl2("gg"));
+            // MyDel3 mydl3 = new MyDel3(string str); // error
+            MyDel3 mydl3 = (string str) => str; // this works
+            Console.WriteLine(mydl3("mydl3"));
         }
     }
 }
