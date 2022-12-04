@@ -18,6 +18,11 @@
 
         var numQuery2 = numbers.Where(num => num % 2 == 0); // notacja z lambdą
         var numQuery3 = numbers.Select(num => num).Where(num => num % 2 == 0); // to samo
+        var numQuery5 = 
+            from num in numbers
+            where num > 10
+            orderby num
+            select num; 
 
         // 3. Query execution.
         foreach (int num in numQuery)
@@ -43,9 +48,9 @@
         //tworzymy zapytanie w którym z naszej kolekcji pobieramy wszystkie elementy
         // i wrzucamy do kolejnej kolekcji
 
-        var querry1 = kolekcjaLiczb.Select(n => n).ToArray();
-        var query2 = kolekcjaLiczb.Select(n => n).ToArray().OrderBy(b => b); // sortowanie z linq
-        var query3 = kolekcjaLiczb.Select(n => n).ToArray().OrderByDescending(c => c);
+        var querry1 = kolekcjaLiczb.Select(n => n).ToArray(); // array
+        var query2 = kolekcjaLiczb.Select(n => n); // ienumerable
+        var query3 = kolekcjaLiczb.Select(n => n).ToArray().OrderByDescending(c => c); // iorderedenumerable
 
         foreach (var item in querry1)
         {
@@ -77,10 +82,12 @@
         //public async Task<IActionresult> List(string name)
         //{
         //    IQueryable<ProductEntity> productsQuery = _dbContext.Products;
+
         //    if (!string.IsNullOrEmpty(name))
         //    {
         //        productsQuery = productsQuery.Where(x => x.Name.Contains(name));
         //    }
+
         //    var products = await productsQuery.ToListAsync(); // uproszczenie
         //    return View(products);
         //}

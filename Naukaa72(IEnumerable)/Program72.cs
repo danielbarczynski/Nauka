@@ -24,5 +24,16 @@
             string s = enumerator.Current;
             Console.WriteLine(s);
         }
+
+        char[] charArr = new char[3] { 'g', 'h', 'j' };
+        var charrArr2 = charArr.GetEnumerator();
+
+        while (charrArr2.MoveNext())
+        {
+            Console.WriteLine(charrArr2.Current);
+        }
+
+        // while (charArr.GetEnumerator().MoveNext()) // won't work
+        //     Console.WriteLine(charArr.GetEnumerator().Current);
     }
 }

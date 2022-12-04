@@ -35,11 +35,7 @@ static class MyClass
         for (int i = 0; i < tekst.Length; i++)
         {       
             char c = tekst[i];
-            if (c == ' ')
-            {
-                tekstNoSpaces = tekstNoSpaces + "";
-            }
-            else
+            if (c != ' ')
             {
                 tekstNoSpaces = tekstNoSpaces + c;
             }         

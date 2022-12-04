@@ -40,7 +40,7 @@ namespace FreeSheet // ADDED FREESHEET2 REFERENCE
             int x = 0;
             while (x > 6)
                 Console.WriteLine("x");
-            x++
+            x++;
         }
 
     }
