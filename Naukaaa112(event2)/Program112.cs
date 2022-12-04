@@ -39,7 +39,7 @@ public class Animal
 {
     public Action Run { get; set; }
     public MyDel MyDel { get; set; } // delegate can also be a property
-
+    public MyDel fieldDel;
     public void RaiseEvent()
     {
         if (Run != null)
@@ -62,10 +62,10 @@ public class ArgsSpecial : EventArgs
 public class Animal2
 {
     // Empty delegate. In this way you are sure that value is always != null 
-    // because no one outside of the class can change it.
+    // because no one outside of the class can change it. And no if (Run != null) is needed
     public event EventHandler<ArgsSpecial> Run = delegate { }; // without event we can assign it by = and invoke it Run()
-    public event EventHandler Run2 = delegate { };
-
+    public event EventHandler Run2;
+    // public event EventHandler Eve { get; set; } // won't work
     public void RaiseEvent()
     {
         // Run(new Animal2(), new ArgsSpecial("Run faster"));

@@ -11,8 +11,8 @@ static void KeyPressed()
     Button button = new();    
     button.ClickEvent += (sender, e) =>
     {
-        e.Name = "Ian";
-        Console.WriteLine($"Button clicked {e.Name}");
+        e.Name = "Daniel";
+        Console.WriteLine($"{sender} clicked {e.Name} {e.Age}");
     };
 
     button.OnClick();
@@ -23,7 +23,7 @@ public class Button
     public event EventHandler<MyArgs> ClickEvent; // without <MyArgs> it won't see a Name prop
     public void OnClick()
     {
-        MyArgs myArgs = new();
+        MyArgs myArgs = new(23);
 
         if (ClickEvent != null)
             ClickEvent.Invoke(this, myArgs);
@@ -32,5 +32,10 @@ public class Button
 
 public class MyArgs : EventArgs
 {
-    public string Name { get; set; } = "Daniel";
+    public MyArgs(int Age)
+    {
+        this.Age = Age;
+    }
+    public string Name { get; set; } = "Ian";
+    public int Age { get; set; }
 }
