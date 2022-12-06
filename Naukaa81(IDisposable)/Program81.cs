@@ -55,8 +55,3 @@ catch (Exception ex)
 
 File.Create("readme.md");
 File.WriteAllText("readme.md", "# hello world");
-
-using (FileStream read = File.OpenRead("readme.md"))
-{
-    read.rea
-}

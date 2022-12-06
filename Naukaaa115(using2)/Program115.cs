@@ -5,10 +5,8 @@ using Terminal = System.Console; // alias
 /* 
 The Dispose method must be called on unmanaged resources such as files, streams, or window handles.
 Traditionally, the resources were released in the finally block of the try/(catch)/finally statements.
-
 The using statement automatically releases the resources when the object goes out of scope. It also 
 ensures that the Dispose is called when an exception occurrs.
-
 In an object inherits from the IDisposable interface, it must be explicitly released.*/
 var path = "thermopylae.txt";
 using var fs = new FileStream(path, FileMode.Open, FileAccess.Read);
@@ -17,6 +15,7 @@ string content = sr.ReadToEnd();
 
 Console.WriteLine(content);
 Console.WriteLine();
+
 // The older syntax required to create a block with curly brackets.
 using (var fs2 = new FileStream(path, FileMode.Open, FileAccess.Read))
 {
@@ -30,7 +29,6 @@ using (var fs2 = new FileStream(path, FileMode.Open, FileAccess.Read))
 Console.WriteLine();
 
 /* It is possible to group the using statements together
-
 using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read))
 using (var sr = new StreamReader(fs, Encoding.UTF8))
 {
@@ -53,7 +51,7 @@ try
 }
 finally
 {
-    fs3?.Close();
+    fs3?.Dispose();
     sr3?.Close();
 }
 
