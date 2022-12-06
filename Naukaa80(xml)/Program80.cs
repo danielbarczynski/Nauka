@@ -59,6 +59,11 @@ namespace CSharpTutA.cs
         }
     }
 
+    public class MyClass
+    {
+        public string Name { get; set; } = "Daniel"; // changed to test in main
+        public int Age { get; set; } = 23;
+    }
     class Program
     {
         static void Main(string[] args)
@@ -86,7 +91,7 @@ namespace CSharpTutA.cs
             Console.WriteLine(bowser.ToString());
             Console.WriteLine();
 
-            //----------------------------------------------------------------------------------------------------------------------------------------------
+            //-----------------------------------------------------------------------------------
             //XML
 
             // Change bowser to show changes were made
@@ -143,8 +148,23 @@ namespace CSharpTutA.cs
                 Console.WriteLine(a.ToString());
             }
 
-            Console.ReadLine();
+            //-----------------------------------------------------------------------------------
 
+            MyClass myClass = new MyClass();
+            myClass.Name = "Test";
+            XmlSerializer xmlSerializer = new(typeof(MyClass)); // without typeof() not accessible
+
+            using (StreamWriter streamWriter = new("myclass.xml"))
+            {
+                xmlSerializer.Serialize(streamWriter, myClass);
+            }
+
+            StreamReader streamReader = new("myclass.xml");
+            object obj2 = xmlSerializer.Deserialize(streamReader);
+            myClass.Name = "Test2"; // not included!!
+            myClass = (MyClass)obj2;
+            streamReader.Close();
+            Console.WriteLine(myClass.Name.ToString());
         }
     }
 }
