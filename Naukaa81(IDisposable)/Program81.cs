@@ -52,3 +52,6 @@ catch (Exception ex)
 {
     //Handle the exception here
 }
+
+File.Create("readme.md");
+File.WriteAllText("readme.md", "# hello world");
