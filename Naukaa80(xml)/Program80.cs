@@ -28,7 +28,7 @@ namespace CSharpTutA.cs
             Weight = weight;
             Height = height;
         }
-        
+
         public override string ToString()
         {
             return string.Format("{0} weighs {1} lbs and is {2} inches tall",

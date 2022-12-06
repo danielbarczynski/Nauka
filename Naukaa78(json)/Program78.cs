@@ -64,6 +64,27 @@ namespace SerializeToFile
             string jsonFile = JsonSerializer.Serialize<Person>(person);
             File.WriteAllText("person.json", jsonFile);
             Console.WriteLine(File.ReadAllText("person.json"));
+
+            // with streamwriter/reader
+
+            Person person2 = new()
+            {
+                Name = "Maciek",
+                Age = "20"
+            };
+
+            string jsonFile2 = JsonSerializer.Serialize(person2);
+            StreamWriter streamWriter = new("person2.json");
+            streamWriter.WriteLine(jsonFile2);
+            streamWriter.Close();
+
+            StreamReader streamReader = new("person2.json");
+            var file = streamReader.ReadToEnd();
+            Console.WriteLine(file);
+
+            person2.Name = "Rita"; // is not included!!
+            person2 = JsonSerializer.Deserialize<Person>(file);
+            Console.WriteLine(person2?.Name);
         }
     }
 }
