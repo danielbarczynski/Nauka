@@ -52,3 +52,11 @@ catch (Exception ex)
 {
     //Handle the exception here
 }
+
+File.Create("readme.md");
+File.WriteAllText("readme.md", "# hello world");
+
+using (FileStream read = File.OpenRead("readme.md"))
+{
+    read.rea
+}
