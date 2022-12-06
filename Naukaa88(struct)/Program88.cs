@@ -3,8 +3,8 @@ var struct2 = new MyStruct();
 var class1 = new MyClass();
 var class2 = new MyClass();
 
-//MyStruct struct3 = null; // null cannot be assigned
-//MyClass class4 = null; //  null can be assigned
+// MyStruct struct3 = null; // null cannot be assigned
+MyClass class4 = null; //  null can be assigned
 
 struct1.x = 4;
 class1.x = 4;
@@ -13,14 +13,18 @@ class2 = class1;
 
 void Assign(MyClass myClass)
 {
-    myClass.x = 5;
-    Console.WriteLine(myClass.x);
+    class1.x = 5;
+    myClass.x = 6;
+    Console.WriteLine(class1.x + " c1"); // doesn't recognize, cannot assign inside function
+    Console.WriteLine(myClass.x + " c2");
 }
 
 void Assign2(MyStruct myStruct)
 {
     struct1.x = 5;
-    Console.WriteLine(struct1.x);
+    myStruct.x = 6;
+    Console.WriteLine(struct1.x + " s1");
+    Console.WriteLine(myStruct.x + " s2");
 }
 
 Assign(class1);

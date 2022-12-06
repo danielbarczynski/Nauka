@@ -43,12 +43,9 @@ namespace DelegateAppl
             //calling the delegate using the named methods 
             nc(2);
 
-            nc = delegate (int x)
-            {
-                Console.WriteLine(x);
-            };
+            nc += delegate (int x) { };
 
-            nc(99);
+            nc(100);
         }
     }
 }
