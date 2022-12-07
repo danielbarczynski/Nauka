@@ -35,12 +35,9 @@ class MyClass : IEquatable<MyClass>
     {
        
     }
-
-    public bool Equals(MyClass other) // if object, casting needed
-    {
-        return this.Name == other.Name; // must include property, otherwise it is working as usual
-    }
-
+    public override bool Equals(object obj) => Equals(obj as MyClass);  // if object, casting needed
+    public bool Equals(MyClass other) => this.Name == other.Name; // must include class property, otherwise it is working as usual
+    
     public override int GetHashCode()
     {
         return this.Name.GetHashCode();

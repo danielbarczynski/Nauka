@@ -2,6 +2,7 @@
 user.Name = "John"; // can change because of set;
 //user.Id = 3; // cannot change because it is readonly - no set
 var userInfo = user.GetUserInfo(user, "pieapple2");
+
 Console.WriteLine(userInfo);
 
 class User

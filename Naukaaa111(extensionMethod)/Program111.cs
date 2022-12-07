@@ -11,6 +11,7 @@ public static class StringExtensions
     {
         Console.WriteLine(value);
     }
+    
     static IEnumerable<T> Where2<T>(this IEnumerable<T> list, Func<T, bool> func)
     {
         return list;

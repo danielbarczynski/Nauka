@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-PointC pointC = new PointC()
+﻿PointC pointC = new PointC()
 {
     X = 100, Y = 200
 };
@@ -31,7 +29,10 @@ PointR pointR2 = new PointR()
 };
 
 Console.WriteLine(pointC == pointC2); // compares references, false. make it stay that way, to be able to compare reference, override equals only
-// Console.WriteLine(pointS == pointS2); error
+Console.WriteLine(pointC.X == pointC2.X); // now true
+
+// Console.WriteLine(pointS == pointS2); // error, struct type
+Console.WriteLine(pointS.X == pointS2.X); // but it can compare values
 Console.WriteLine(pointR == pointR2); // compares values, true
 
 Console.WriteLine("-------------------");
@@ -42,18 +43,20 @@ Console.WriteLine(pointR.Equals(pointR2)); // true, compares values
 
 Console.WriteLine("-------------------");
 
-Console.WriteLine(pointC.GetHashCode() + " " + pointC2.GetHashCode);
+Console.WriteLine(pointC.GetHashCode() + " " + pointC2.GetHashCode());
 
 PointC pointC3 = new PointC()
 {
     X = 100, Y = 300
 };
 
+Console.WriteLine(pointC2.GetHashCode() + " " + pointC3.GetHashCode()); // actually the same
+
 Dictionary<PointC, string> dictionary = new Dictionary<PointC, string>();
 dictionary.Add(pointC, "c1");
 dictionary.Add(pointC2, "c2");
 
-if (dictionary.ContainsKey(pointC3)) // with gethascode it is much faster to look through dictionary
+if (dictionary.ContainsKey(pointC3)) // with gethashcode it is much faster to look through dictionary
 {
     Console.WriteLine(dictionary[pointC3]);
 }
