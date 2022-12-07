@@ -80,7 +80,7 @@ var employeeDepartments6 = from e in Employee.employees
 
 //--------------------------------------------------------------------------------
 
-foreach (var item in employeeDepartments2)
+foreach (var item in employeeDepartments)
 {
     Console.WriteLine(item.Department.DepartmentName);
     
@@ -92,7 +92,7 @@ foreach (var item in employeeDepartments2)
 
 Console.WriteLine("------------");
 
-foreach (var item in employeeDepartments4)
+foreach (var item in employeeDepartments3)
 {
     Console.WriteLine(item.Employee.Name + " " + item.Department.DepartmentName);
 }

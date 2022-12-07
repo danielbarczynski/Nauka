@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 string gg = "gg";
 string ggg = "gg";
 Console.WriteLine(gg == ggg); // true
@@ -22,15 +24,26 @@ Console.WriteLine(x.Equals(z)); // values the same, prints true
 MyClass mc = new();
 MyClass mc2 = new();
 
-Console.WriteLine();
 Console.WriteLine(mc == mc2); 
-Console.WriteLine(mc.Equals(mc2)); // it refers to objects and strings only
+Console.WriteLine(mc.Equals(mc2)); // true because of Equals override
 
-class MyClass
+class MyClass : IEquatable<MyClass>
 {
+    public string Name { get; set; }
+
     class Human // cant be in namespace
     {
+       
+    }
 
+    public bool Equals(MyClass other) // if object, casting needed
+    {
+        return this.Name == other.Name; // must include property, otherwise it is working as usual
+    }
+
+    public override int GetHashCode()
+    {
+        return this.Name.GetHashCode();
     }
 }
 
