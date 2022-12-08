@@ -34,7 +34,8 @@ Console.WriteLine();
 
 Console.WriteLine(class2.x); // oba obiekty odwoluja sie do jednego miejsca w pamieci (typy referencyjne)
 Console.WriteLine(struct2.x); // ze struct tak nie jest
-
+// Console.WriteLine(struct1 == struct2); //* cannot apply on struct types
+Console.WriteLine(class1 == class2);
 
 struct MyStruct
 {
