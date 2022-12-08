@@ -28,7 +28,7 @@ class Library : IEnumerable<Book>
         new Book { Name = "Harry Potter", Author = "JK Rowling"}
     };
 
-    public IEnumerator<Book> GetEnumerator() => books.GetEnumerator();
+    public IEnumerator<Book> GetEnumerator() => books.GetEnumerator(); //* we could just go with this alone, without implementing interface, but we would lose all linq methods
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
 
