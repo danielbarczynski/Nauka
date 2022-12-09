@@ -9,6 +9,7 @@ record Person2
 {
     public string? Name { get; set; }
     public string? Surname { get; set; }
+    public string Adress = "Krakow";
 
     public Person2() // has a constructor
     {
@@ -28,7 +29,7 @@ class Program82
         //var person5 = person2 with { Name = "Gary" }; // cannot clone that, only struct or record
        
         Console.WriteLine("\nrecord:");
-
+        
         var person3 = new Person2() { Name = "Bob", Surname = "Rose" };
         var person4 = new Person2() { Name = "Bob", Surname = "Rose" };
         var person6 = person4 with { Name = "Gary" }; // moze tez byc == person4; rowniez dziala przy recordzie
@@ -38,6 +39,8 @@ class Program82
         Console.WriteLine(person6);
 
         person3.Name = "h";
+        person3.Adress = "Wroclaw";
+
         Console.WriteLine(person3);
         Console.WriteLine(person4);
     }
