@@ -1,9 +1,11 @@
 ﻿int x = 100;
 int y = x;
+
 var task2 = new Task(() => 
 {   
     Console.WriteLine(x + y);
 });
+
 var task3 = new Task(() => 
 {
     Console.WriteLine(x * y);
@@ -14,50 +16,39 @@ task2.Start();
 task2.Wait(); // it finishes first, because block the threads to wait for this task
 task3.Wait();
 
-// -------------------------------------------------------
-
-int PerformComputation() 
-{
-    Random random = new();
-    string result = "";
-    int ave = 0;
-    for (int i = 0; i < 1000; i++)
-    {
-        int randNum = random.Next(0, 1001);
-        result += " " + randNum.ToString();
-        if (randNum == 666) {
-            ave = randNum;
-            Console.WriteLine("\n AVE");
-            break;
-        }
-    }
-    Console.WriteLine(result);
-    return ave;
-}
 //! The return type of an async method must be void, Task, Task<T>, a task-like type, IAsyncEnumerable<T>, or IAsyncEnumerator<T>
-async void AddNums() 
+async void Something() 
 {
-    // var res = await PerformComputation(); // function doesn't containt await keyword so it isn't working
-    var res = await Task.Run(() => PerformComputation()); // now it works
-    // var res2 = res;
-    Console.WriteLine("\nRESULT");
-    Console.WriteLine(res - 99);
+
 }
-async Task DoSomeWorkAsync() // returns void 
+
+// task that returns 
+async Task<int> AddNumsAsync(int x, int y) 
 {
-  // Perform some asynchronous operation
-  int result = await Task.Run(() => PerformComputation());
-  Console.WriteLine(result);
+    // x = AddNum(x); // can't await non async func
+    x = await Task.Run(() => AddNum(x)); //! not working without await
+    return x + y;
 }
-// DoSomeWorkAsync(); //* without await there is no result printed
-// await Task.Run(() => AddNums()); // isn't task so we have to run it this way
-// await AddNums(); // cannot await void
-var task = new Task(() => AddNums());
-//* in this case result 0 is in the end 
-// task.Start();
-// task.Wait(); // waits for the task to complete action, but in this case actually not
-// await DoSomeWorkAsync();
-//* in this case it prints shit...
-//task.Start();
-// task.Wait(); 
-// await DoSomeWorkAsync();
+
+int AddNums(int x, int y)
+{
+    return x * y;
+}
+
+int AddNum(int x)
+{
+    Thread.Sleep(2000); // it actually waits for it
+    return x * x;
+}
+
+Console.WriteLine("Asynchronous:");
+var addNumsAsync = AddNumsAsync(10, 10);  //* it doesn't block the flow
+Console.WriteLine(AddNums(10, 10)); 
+Console.WriteLine(addNumsAsync.Result);
+
+Console.WriteLine("Synchronous:");
+var add = AddNum(10); //* it actually blocks the whole flow for 5 sec!!
+Console.WriteLine(AddNums(10, 10)); 
+Console.WriteLine(add);
+
+
