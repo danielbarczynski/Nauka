@@ -1,4 +1,22 @@
-﻿int PerformComputation() 
+﻿int x = 100;
+int y = x;
+var task2 = new Task(() => 
+{   
+    Console.WriteLine(x + y);
+});
+var task3 = new Task(() => 
+{
+    Console.WriteLine(x * y);
+});
+
+task3.Start();
+task2.Start();
+task2.Wait(); // it finishes first, because block the threads to wait for this task
+task3.Wait();
+
+// -------------------------------------------------------
+
+int PerformComputation() 
 {
     Random random = new();
     string result = "";
@@ -36,9 +54,9 @@ async Task DoSomeWorkAsync() // returns void
 // await AddNums(); // cannot await void
 var task = new Task(() => AddNums());
 //* in this case result 0 is in the end 
-task.Start();
-task.Wait(); // waits for the task to complete action, but in this case actually not
-await DoSomeWorkAsync();
+// task.Start();
+// task.Wait(); // waits for the task to complete action, but in this case actually not
+// await DoSomeWorkAsync();
 //* in this case it prints shit...
 //task.Start();
 // task.Wait(); 
