@@ -8,10 +8,15 @@ while (enumer.MoveNext())
     Console.Write(enumer.Current + " ");
 }
 
-Console.WriteLine("\nForeach loop:");
 Library library = new Library();
+IEnumerable<Book> library2 = new Library();
 
+Console.WriteLine("\nImplicit foreach loop:");
 foreach (var item in library)
+    Console.WriteLine(item.ToString());
+
+Console.WriteLine("\nExplicit foreach loop from interface:");
+foreach (var item in library2)
     Console.WriteLine(item.ToString());
 
 Console.WriteLine("\nFor loop:");

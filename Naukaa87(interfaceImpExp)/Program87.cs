@@ -2,7 +2,7 @@
 
 interface IInterface
 {
-    void Start();
+    string Start();
     void Pause();
     void Stop();
 }
@@ -10,7 +10,16 @@ interface IInterface
 class Mega : IInterface
 {
     // implementing interface implicitly (niejawnie)
-    public void Start() { } // must be public 
+    public string Start() // must be public 
+    {
+        return "Start";
+    } 
+
+    string IInterface.Start() // passing to public like with GetEnumerator() method
+    {
+        return Start(); // printing "Start" from public method
+        // return "Not start";
+    }
 
     // implementing interface explicitly (jawnie)
     //* they can be only accessable from Interface
@@ -24,7 +33,7 @@ class Mega : IInterface
         // mega.Stop(); // can't access
 
         IInterface mega2 = new Mega();
-        mega2.Start();
+        Console.WriteLine(mega2.Start());
         mega2.Stop(); // can access, another reason for initializing class from interface
     }
 }
