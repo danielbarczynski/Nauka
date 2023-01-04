@@ -50,8 +50,8 @@ namespace SerializeToFile
                 ""Age"" : ""16""
             }
             ";
-            Person? me = JsonSerializer.Deserialize<Person>(forJson);
-            Person? karol = JsonSerializer.Deserialize<Person>(forJson2);
+            Person me = JsonSerializer.Deserialize<Person>(forJson);
+            Person karol = JsonSerializer.Deserialize<Person>(forJson2);
             Console.WriteLine(me.Name + " " + me.Age);
             Console.WriteLine(karol.Name + " " + karol.Age);
 
@@ -74,11 +74,11 @@ namespace SerializeToFile
             };
 
             string jsonFile2 = JsonSerializer.Serialize(person2);
-            StreamWriter streamWriter = new("person2.json");
+            StreamWriter streamWriter = new StreamWriter("person2.json");
             streamWriter.WriteLine(jsonFile2);
             streamWriter.Close();
 
-            StreamReader streamReader = new("person2.json");
+            StreamReader streamReader = new StreamReader("person2.json");
             var file = streamReader.ReadToEnd();
             Console.WriteLine(file);
 
