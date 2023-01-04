@@ -11,6 +11,7 @@ namespace Naukaa57_abstract2_
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+
         int MonthlySalary(); // can be also in the interface
     }
 }

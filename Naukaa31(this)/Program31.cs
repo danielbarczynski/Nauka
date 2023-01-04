@@ -24,7 +24,7 @@ namespace Naukaa31
             Console.WriteLine("456");
         }
     }
-    class Cow
+    class Cow // this occurs only in current class while base in parent (inherited) class
     {
         public string Name { get; set; }
         public int Age { get; set; }

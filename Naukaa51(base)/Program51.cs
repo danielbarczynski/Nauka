@@ -20,7 +20,7 @@ namespace Naukaa51_base_
 
     }
 
-    class Basee
+    class Basee 
     {
         public Basee() // gdyby tego nie bylo, public Sub() nie moglby byc uruchomiony, bo nie ma (string name) po Basee
         {
@@ -33,7 +33,7 @@ namespace Naukaa51_base_
         }
     }
 
-    class Sub : Basee
+    class Sub : Basee // base occurs for parent (inherited class) while this for the same class
     {
         public Sub()  //base() jest domyślnie, nie trzeba tu pisać
         {
