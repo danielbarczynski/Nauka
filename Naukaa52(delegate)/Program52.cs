@@ -50,7 +50,7 @@ namespace Naukaa52_delegate_
             // second way
             newDel = (x) => x + "as anonymous";
 
-            NewDel newDel2 = (x) => x + "as anonymous";
+            NewDel newDel2 = x => x + "as anonymous";
             
             Console.WriteLine(newDel2("stringg "));
             del("confirmed");
