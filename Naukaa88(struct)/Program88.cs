@@ -29,7 +29,9 @@ void Assign2(MyStruct myStruct)
 
 Assign(class1);
 Assign2(struct1);
-
+MyStruct struct3 = struct1;
+struct3.x = 11;
+Console.WriteLine(struct1.x); // not 11
 Console.WriteLine();
 
 Console.WriteLine(class2.x); // oba obiekty odwoluja sie do jednego miejsca w pamieci (typy referencyjne)
@@ -40,6 +42,10 @@ Console.WriteLine(class1 == class2);
 struct MyStruct
 {
     public int x;
+    // public MyStruct() // can have a constructor, but field must be assigned first
+    // {
+    
+    // }
 }
 
 class MyClass
