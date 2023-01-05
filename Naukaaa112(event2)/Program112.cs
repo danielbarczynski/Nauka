@@ -25,7 +25,11 @@ animal2.Run += (sender, e) => Console.WriteLine("I'm running. My value is {0}", 
 // animal2.Run(animal2, new ArgsSpecial("Run faster")); // won't work
 // animal2.Run2 += (sender, e) => Console.WriteLine($"I'm not running. {e}"); // cannot convert EventArgs to string
 animal2.RaiseEvent();
+animal2.Run2 += (sender, e) => Console.WriteLine("I'm running. My value is {0}", e.Operation);
+animal2.RaiseEvent2();
 
+animal2.Run3 += (str) => Console.WriteLine($"I'm running. My value is {str}");
+animal2.RaiseEvent3();
 
 /* Differences:
 1. You aren't using a public property but a public field (using events, the compiler protects your fields from unwanted access) 
@@ -64,15 +68,25 @@ public class Animal2
     // Empty delegate. In this way you are sure that value is always != null 
     // because no one outside of the class can change it. And no if (Run != null) is needed
     public event EventHandler<ArgsSpecial> Run = delegate { }; // without event we can assign it by = and invoke it Run()
-    public event EventHandler Run2;
+    public event EventHandler<ArgsSpecial> Run2;
+    public event Del Run3;
     // public event EventHandler Eve { get; set; } // won't work
     public void RaiseEvent()
     {
         // Run(new Animal2(), new ArgsSpecial("Run faster"));
         Run(this, new ArgsSpecial("Run faster"));
-        // Run2(this, "run slower");
+    }
+    public void RaiseEvent2() 
+    {
+        // Run2(); //! event handles must contain object and sender
+        Run2(this, new ArgsSpecial("Run slower"));
+    }
+    public void RaiseEvent3() 
+    {
+        Run3("none");
     }
 }
 
 // event handler is declared as following delegate
 public delegate void EventHandler2(object sender, EventArgs e);
+public delegate void Del(string str); // public because event is public
